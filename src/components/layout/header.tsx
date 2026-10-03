@@ -7,17 +7,11 @@ import { Navigation } from './navigation';
 export function Header() {
   return (
     <>
-      <a
-        className="skip-link"
-        href="#main-content"
-      >
+      <a className="skip-link" href="#main-content">
         Saltar al contenido
       </a>
 
-      <header
-        className="site-header"
-        id="mainNav"
-      >
+      <header className="site-header" id="mainNav">
         <div className="shell header-inner">
           <Link
             href="/"
@@ -44,10 +38,7 @@ export function Header() {
           aria-label="Navegación sin JavaScript"
         >
           {navigation.map(({ id, label }) => (
-            <a
-              key={id}
-              href={`/#${id}`}
-            >
+            <a key={id} href={`/#${id}`}>
               {label}
             </a>
           ))}

@@ -29,9 +29,7 @@ export function Navigation() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries.filter(
-          (entry) => entry.isIntersecting,
-        );
+        const visible = entries.filter((entry) => entry.isIntersecting);
 
         if (visible[0]) {
           setActive(visible[0].target.id);
@@ -42,10 +40,7 @@ export function Navigation() {
       },
     );
 
-    [
-      ...navigation.map(({ id }) => id),
-      'hero',
-    ].forEach((id) => {
+    [...navigation.map(({ id }) => id), 'hero'].forEach((id) => {
       const section = document.getElementById(id);
 
       if (section) {
@@ -57,9 +52,7 @@ export function Navigation() {
   }, [isHome]);
 
   useEffect(() => {
-    const media = window.matchMedia(
-      '(min-width: 1100px)',
-    );
+    const media = window.matchMedia('(min-width: 1100px)');
 
     const closeOnDesktop = () => {
       if (media.matches) {
@@ -67,37 +60,22 @@ export function Navigation() {
       }
     };
 
-    media.addEventListener(
-      'change',
-      closeOnDesktop,
-    );
+    media.addEventListener('change', closeOnDesktop);
 
-    return () =>
-      media.removeEventListener(
-        'change',
-        closeOnDesktop,
-      );
+    return () => media.removeEventListener('change', closeOnDesktop);
   }, []);
 
-  const links = navigation.map(
-    ({ id, label }) => (
-      <li key={id}>
-        <a
-          href={`${isHome ? '' : '/'}#${id}`}
-          aria-current={
-            isHome && active === id
-              ? 'location'
-              : undefined
-          }
-          onClick={() =>
-            dialog.current?.close()
-          }
-        >
-          {label}
-        </a>
-      </li>
-    ),
-  );
+  const links = navigation.map(({ id, label }) => (
+    <li key={id}>
+      <a
+        href={`${isHome ? '' : '/'}#${id}`}
+        aria-current={isHome && active === id ? 'location' : undefined}
+        onClick={() => dialog.current?.close()}
+      >
+        {label}
+      </a>
+    </li>
+  ));
 
   function showMenu() {
     dialog.current?.showModal();
@@ -111,10 +89,7 @@ export function Navigation() {
   return (
     <>
       {/* Navegación desktop */}
-      <nav
-        aria-label="Navegación principal"
-        className="desktop-navigation"
-      >
+      <nav aria-label="Navegación principal" className="desktop-navigation">
         <ul>{links}</ul>
       </nav>
 
@@ -125,10 +100,7 @@ export function Navigation() {
           className="icon-button header-github"
           aria-label="GitHub de Benjamin Rumay"
         >
-          <Github
-            size={19}
-            aria-hidden="true"
-          />
+          <Github size={19} aria-hidden="true" />
         </ExternalLink>
 
         <ExternalLink
@@ -136,10 +108,7 @@ export function Navigation() {
           className="icon-button header-linkedin"
           aria-label="LinkedIn de Benjamin Rumay"
         >
-          <Linkedin
-            size={19}
-            aria-hidden="true"
-          />
+          <Linkedin size={19} aria-hidden="true" />
         </ExternalLink>
 
         <a
@@ -147,11 +116,7 @@ export function Navigation() {
           download
           className="button button-small button-primary header-cv btn-ripple"
         >
-          <Download
-            size={16}
-            aria-hidden="true"
-          />
-
+          <Download size={16} aria-hidden="true" />
           Descargar CV
         </a>
 
@@ -163,10 +128,7 @@ export function Navigation() {
           aria-controls="mobile-menu"
           onClick={showMenu}
         >
-          <Menu
-            size={24}
-            aria-hidden="true"
-          />
+          <Menu size={24} aria-hidden="true" />
         </button>
       </div>
 
@@ -178,10 +140,7 @@ export function Navigation() {
         aria-label="Menú de navegación"
         onClose={() => setOpen(false)}
         onClick={(event) => {
-          if (
-            event.target ===
-            event.currentTarget
-          ) {
+          if (event.target === event.currentTarget) {
             closeMenu();
           }
         }}
@@ -194,10 +153,7 @@ export function Navigation() {
             aria-label="Cerrar menú"
             onClick={closeMenu}
           >
-            <X
-              size={24}
-              aria-hidden="true"
-            />
+            <X size={24} aria-hidden="true" />
           </button>
         </div>
 
@@ -208,27 +164,13 @@ export function Navigation() {
 
         {/* Redes */}
         <div className="mobile-menu-socials">
-          <ExternalLink
-            href={profile.github}
-            className="button button-outline"
-          >
-            <Github
-              size={18}
-              aria-hidden="true"
-            />
-
+          <ExternalLink href={profile.github} className="button button-outline">
+            <Github size={18} aria-hidden="true" />
             GitHub
           </ExternalLink>
 
-          <ExternalLink
-            href={profile.linkedin}
-            className="button button-outline"
-          >
-            <Linkedin
-              size={18}
-              aria-hidden="true"
-            />
-
+          <ExternalLink href={profile.linkedin} className="button button-outline">
+            <Linkedin size={18} aria-hidden="true" />
             LinkedIn
           </ExternalLink>
         </div>
@@ -239,11 +181,7 @@ export function Navigation() {
           download
           className="button button-primary mobile-menu-cv btn-ripple"
         >
-          <Download
-            size={17}
-            aria-hidden="true"
-          />
-
+          <Download size={17} aria-hidden="true" />
           Descargar CV
         </a>
       </dialog>

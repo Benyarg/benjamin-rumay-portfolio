@@ -2008,9 +2008,7 @@ html[data-motion='paused'] .motion-toggle {
 
   background: #8be0bd;
 
-  box-shadow:
-    0 0 10px
-    rgba(139, 224, 189, 0.35);
+  box-shadow: 0 0 10px rgba(139, 224, 189, 0.35);
 }
 
 .coming-soon-content {
@@ -2062,11 +2060,8 @@ html[data-motion='paused'] .motion-toggle {
 
   background: rgba(255, 255, 255, 0.025);
 
-  box-shadow:
-    0 16px 40px
-    rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
-
 
 /* =========================================================
    RESPONSIVE CONSOLIDADO
@@ -2942,7 +2937,6 @@ html[data-motion='paused'] .motion-toggle {
   }
 }
 
-
 /* =========================================================
    DESKTOP XXL
    ========================================================= */
@@ -2970,13 +2964,9 @@ html[data-motion='paused'] .motion-toggle {
    ========================================================= */
 
 .mobile-menu {
-  width: min(
-    430px,
-    calc(100% - 32px)
-  );
+  width: min(430px, calc(100% - 32px));
 
-  max-height:
-    calc(100dvh - 32px);
+  max-height: calc(100dvh - 32px);
 
   margin: 16px auto;
 
@@ -2984,9 +2974,7 @@ html[data-motion='paused'] .motion-toggle {
 
   overflow-y: auto;
 
-  border:
-    1px solid
-    rgba(174, 198, 255, 0.22);
+  border: 1px solid rgba(174, 198, 255, 0.22);
 
   border-radius: 18px;
 
@@ -2994,18 +2982,14 @@ html[data-motion='paused'] .motion-toggle {
 
   color: var(--text);
 
-  box-shadow:
-    0 20px 60px
-    rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 dialog::backdrop {
-  background:
-    rgba(5, 8, 12, 0.82);
+  background: rgba(5, 8, 12, 0.82);
 
   backdrop-filter: blur(6px);
 }
-
 
 /* Cabecera sin título */
 .mobile-menu-heading {
@@ -3019,7 +3003,6 @@ dialog::backdrop {
   margin-bottom: 8px;
 }
 
-
 /* Botón cerrar */
 .mobile-menu-close {
   width: 40px;
@@ -3027,7 +3010,6 @@ dialog::backdrop {
 
   color: var(--muted);
 }
-
 
 /* Links */
 .mobile-menu ul {
@@ -3046,9 +3028,7 @@ dialog::backdrop {
 
   padding: 12px 10px;
 
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.065);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
 
   color: #e3e2e2;
 
@@ -3067,13 +3047,11 @@ dialog::backdrop {
   padding-left: 14px;
 }
 
-
 /* Redes */
 .mobile-menu-socials {
   display: grid;
 
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 10px;
 
@@ -3086,7 +3064,6 @@ dialog::backdrop {
   min-height: 48px;
 }
 
-
 /* Descargar CV */
 .mobile-menu-cv {
   width: 100%;
@@ -3095,7 +3072,6 @@ dialog::backdrop {
 
   margin-top: 10px;
 }
-
 
 /* =========================================================
    MOBILE Y TABLET:
@@ -3122,20 +3098,17 @@ dialog::backdrop {
   }
 }
 
-
 /* =========================================================
    MÓVIL PEQUEÑO
    ========================================================= */
 
 @media (max-width: 479px) {
   .mobile-menu {
-    width:
-      calc(100% - 24px);
+    width: calc(100% - 24px);
 
     margin: 12px auto;
 
-    padding:
-      18px 20px 22px;
+    padding: 18px 20px 22px;
 
     border-radius: 16px;
   }
@@ -3173,7 +3146,6 @@ dialog::backdrop {
   margin-bottom: 28px;
 }
 
-
 /* =========================================================
    TABLET
    ========================================================= */
@@ -3188,7 +3160,6 @@ dialog::backdrop {
     margin-bottom: 26px;
   }
 }
-
 
 /* =========================================================
    MÓVIL

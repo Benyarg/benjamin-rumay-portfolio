@@ -1,14 +1,6 @@
-import {
-  render,
-  screen,
-  within,
-} from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 
-import {
-  describe,
-  expect,
-  it,
-} from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import Home from '@/app/page';
 import { Technologies } from '@/components/sections/technologies';
@@ -17,26 +9,15 @@ describe('Contenido principal', () => {
   it('muestra el perfil y los proyectos principales', () => {
     render(<Home />);
 
-    expect(
-      screen.getByRole('main'),
-    ).toHaveAttribute(
-      'id',
-      'main-content',
-    );
+    expect(screen.getByRole('main')).toHaveAttribute('id', 'main-content');
 
     expect(
       screen.getByRole('heading', {
         level: 1,
       }),
-    ).toHaveTextContent(
-      'Benjamin Rumay',
-    );
+    ).toHaveTextContent('Benjamin Rumay');
 
-    expect(
-      screen.getByText(
-        'Bachiller en proceso',
-      ),
-    ).toBeInTheDocument();
+    expect(screen.getByText('Bachiller en proceso')).toBeInTheDocument();
 
     expect(
       screen.getByRole('heading', {
@@ -87,18 +68,10 @@ describe('Contenido principal', () => {
   it('muestra Next.js en el stack personal', () => {
     render(<Technologies />);
 
-    const section =
-      screen.getByRole(
-        'region',
-        {
-          name: 'Stack tecnológico',
-        },
-      );
+    const section = screen.getByRole('region', {
+      name: 'Stack tecnológico',
+    });
 
-    expect(
-      within(section).getByText(
-        'Next.js',
-      ),
-    ).toBeInTheDocument();
+    expect(within(section).getByText('Next.js')).toBeInTheDocument();
   });
 });

@@ -2,12 +2,7 @@
 
 import Image from 'next/image';
 import { useRef, useState } from 'react';
-import {
-  ChevronLeft,
-  ChevronRight,
-  Expand,
-  X,
-} from 'lucide-react';
+import { ChevronLeft, ChevronRight, Expand, X } from 'lucide-react';
 
 import type { ProjectImage } from '@/types/portfolio';
 import { useScrollLock } from '@/hooks/use-scroll-lock';
@@ -26,16 +21,11 @@ export function ProjectGallery({
 
   if (!images.length) return null;
 
-  const current =
-    selected !== null
-      ? images[selected]
-      : undefined;
+  const current = selected !== null ? images[selected] : undefined;
 
   function move(direction: number) {
     setSelected((index) =>
-      index === null
-        ? null
-        : (index + direction + images.length) % images.length,
+      index === null ? null : (index + direction + images.length) % images.length,
     );
   }
 
@@ -52,10 +42,7 @@ export function ProjectGallery({
     <>
       <div className="gallery-grid">
         {images.map((image, index) => (
-          <figure
-            className="gallery-item panel"
-            key={image.src}
-          >
+          <figure className="gallery-item panel" key={image.src}>
             <a
               href={image.src}
               target="_blank"
@@ -64,12 +51,7 @@ export function ProjectGallery({
               aria-label={`Ampliar: ${image.caption}`}
               aria-haspopup="dialog"
               onClick={(event) => {
-                if (
-                  event.metaKey ||
-                  event.ctrlKey ||
-                  event.shiftKey ||
-                  event.altKey
-                ) {
+                if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
                   return;
                 }
 
@@ -85,10 +67,7 @@ export function ProjectGallery({
                 sizes="(max-width: 767px) 92vw, 580px"
               />
 
-              <span
-                className="expand-icon"
-                aria-hidden="true"
-              >
+              <span className="expand-icon" aria-hidden="true">
                 <Expand size={18} />
               </span>
             </a>
@@ -131,9 +110,7 @@ export function ProjectGallery({
         }}
       >
         <div className="lightbox-header">
-          <h3 id="gallery-dialog-title">
-            {title} · Galería
-          </h3>
+          <h3 id="gallery-dialog-title">{title} · Galería</h3>
 
           <button
             className="icon-button"

@@ -18,55 +18,34 @@ export function ContactForm() {
     const message = String(data.get('message') || '').trim();
 
     if (name.length > 80) {
-      setError(
-        'El nombre puede tener como máximo 80 caracteres.',
-      );
+      setError('El nombre puede tener como máximo 80 caracteres.');
 
-      form
-        .querySelector<HTMLInputElement>('#contact-name')
-        ?.focus();
+      form.querySelector<HTMLInputElement>('#contact-name')?.focus();
 
       return;
     }
 
     if (message.length < 10 || message.length > 2000) {
-      setError(
-        'Escribe un mensaje de entre 10 y 2000 caracteres.',
-      );
+      setError('Escribe un mensaje de entre 10 y 2000 caracteres.');
 
-      form
-        .querySelector<HTMLTextAreaElement>('#contact-message')
-        ?.focus();
+      form.querySelector<HTMLTextAreaElement>('#contact-message')?.focus();
 
       return;
     }
 
     setError('');
 
-    window.open(
-      whatsappUrl(name, message),
-      '_blank',
-      'noopener,noreferrer',
-    );
+    window.open(whatsappUrl(name, message), '_blank', 'noopener,noreferrer');
   }
 
   return (
-    <form
-      className="contact-form panel reveal-right"
-      onSubmit={submit}
-      noValidate
-    >
-      <p className="small-label">
-        Envíame un mensaje
-      </p>
+    <form className="contact-form panel reveal-right" onSubmit={submit} noValidate>
+      <p className="small-label">Envíame un mensaje</p>
 
-      <h3>
-        Cuéntame qué tienes en mente
-      </h3>
+      <h3>Cuéntame qué tienes en mente</h3>
 
       <p className="form-intro">
-        Completa el formulario y continuarás la conversación
-        directamente por WhatsApp.
+        Completa el formulario y continuarás la conversación directamente por WhatsApp.
       </p>
 
       <div className="form-field">
@@ -85,9 +64,7 @@ export function ContactForm() {
       </div>
 
       <div className="form-field">
-        <label htmlFor="contact-message">
-          Mensaje
-        </label>
+        <label htmlFor="contact-message">Mensaje</label>
 
         <textarea
           id="contact-message"
@@ -97,9 +74,7 @@ export function ContactForm() {
           maxLength={2000}
           required
           placeholder="Cuéntame sobre tu proyecto o propuesta"
-          aria-describedby={
-            `contact-help${error ? ' contact-error' : ''}`
-          }
+          aria-describedby={`contact-help${error ? ' contact-error' : ''}`}
           aria-invalid={error ? true : undefined}
           onInput={() => {
             if (error) {
@@ -109,41 +84,25 @@ export function ContactForm() {
         />
       </div>
 
-      <p
-        id="contact-help"
-        className="form-help"
-      >
-        Entre 10 y 2000 caracteres. Este sitio no almacena tu
-        mensaje; se abrirá WhatsApp para que puedas revisarlo y
-        enviarlo.
+      <p id="contact-help" className="form-help">
+        Entre 10 y 2000 caracteres. Este sitio no almacena tu mensaje; se abrirá WhatsApp
+        para que puedas revisarlo y enviarlo.
       </p>
 
       {error && (
-        <p
-          id="contact-error"
-          className="form-error"
-          role="alert"
-        >
+        <p id="contact-error" className="form-error" role="alert">
           {error}
         </p>
       )}
 
       <div className="form-buttons">
-        <button
-          className="button button-primary contact-submit btn-ripple"
-          type="submit"
-        >
-          <MessageCircle
-            size={18}
-            aria-hidden="true"
-          />
+        <button className="button button-primary contact-submit btn-ripple" type="submit">
+          <MessageCircle size={18} aria-hidden="true" />
           Enviar mensaje
         </button>
       </div>
       <noscript>
-        <p>
-          Activa JavaScript para preparar el mensaje de WhatsApp.
-        </p>
+        <p>Activa JavaScript para preparar el mensaje de WhatsApp.</p>
       </noscript>
     </form>
   );

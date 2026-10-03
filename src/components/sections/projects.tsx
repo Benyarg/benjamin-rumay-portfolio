@@ -4,12 +4,9 @@ import { ProjectCard } from '@/components/projects/project-card';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 export function Projects() {
-  const prominentSlug =
-    projects.find(
-      (project) =>
-        'featured' in project &&
-        project.featured,
-    )?.slug;
+  const prominentSlug = projects.find(
+    (project) => 'featured' in project && project.featured,
+  )?.slug;
 
   return (
     <section
@@ -25,22 +22,13 @@ export function Projects() {
       />
 
       <div className="projects-grid">
-        {projects.map(
-          (project) => (
-            <ProjectCard
-              key={
-                project.slug
-              }
-              project={
-                project
-              }
-              prominent={
-                project.slug ===
-                prominentSlug
-              }
-            />
-          ),
-        )}
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            prominent={project.slug === prominentSlug}
+          />
+        ))}
       </div>
     </section>
   );
