@@ -8,6 +8,11 @@ updates:
 
     open-pull-requests-limit: 5
 
+    ignore:
+      - dependency-name: '*'
+        update-types:
+          - version-update:semver-major
+
     groups:
       next-react:
         patterns:
