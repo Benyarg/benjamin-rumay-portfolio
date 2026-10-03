@@ -1,8 +1,8 @@
 # Benjamin Rumay · Portafolio
 
-Portafolio profesional de **Benjamin Rumay**, desarrollado con Next.js para presentar proyectos, experiencia, tecnologías y canales de contacto.
+Portafolio profesional de **Benjamin Rumay**, desarrollado con **Next.js** para presentar proyectos, experiencia, tecnologías y canales de contacto.
 
-El sitio conserva la identidad visual **BR**, tipografía Inter, fondo oscuro, acentos azules, diseño responsive y animaciones propias, manteniendo una arquitectura organizada y preparada para producción.
+El sitio mantiene la identidad visual **BR**, tipografía Inter, fondo oscuro, acentos azules, diseño responsive y animaciones propias, con una arquitectura organizada y preparada para producción.
 
 ![Vista de escritorio del portafolio](docs/capturas/desktop.png)
 
@@ -21,7 +21,7 @@ El sitio conserva la identidad visual **BR**, tipografía Inter, fondo oscuro, a
 - Landing page profesional y responsive.
 - Diseño adaptado para escritorio, tablet y móvil.
 - Navegación accesible y menú responsive.
-- Animaciones de escritura, partículas, reveal, brillo y efectos visuales.
+- Animaciones de escritura, partículas, reveal, brillo y microinteracciones.
 - Control para pausar animaciones.
 - Compatibilidad con `prefers-reduced-motion`.
 - Galerías de proyectos con visualización ampliada.
@@ -32,7 +32,7 @@ El sitio conserva la identidad visual **BR**, tipografía Inter, fondo oscuro, a
 
 ## Proyectos
 
-Actualmente el portafolio presenta cinco proyectos:
+Actualmente el portafolio presenta cinco proyectos.
 
 ### Detalles Belis
 
@@ -72,7 +72,7 @@ Sistema web y móvil para la gestión de pedidos, inventario y ventas de una caf
 
 **Estado:** En desarrollo · Disponible próximamente.
 
-Los proyectos que aún están en desarrollo se muestran como **Disponible próximamente** y no presentan el botón principal de acceso utilizado por los proyectos publicados.
+Los proyectos que todavía están en desarrollo se muestran como **Disponible próximamente** y no presentan el botón principal `Ver proyecto` utilizado por los proyectos publicados.
 
 ## Estructura principal
 
@@ -80,20 +80,24 @@ Los proyectos que aún están en desarrollo se muestran como **Disponible próxi
 .
 ├── .github/
 ├── docs/
+│   └── capturas/
 ├── public/
 │   └── projects/
 ├── src/
 │   ├── app/
 │   ├── components/
 │   ├── data/
+│   ├── hooks/
 │   ├── lib/
 │   └── types/
 ├── tests/
 │   └── unit/
 ├── .env.example
 ├── .gitignore
+├── .nvmrc
 ├── next.config.ts
 ├── package.json
+├── package-lock.json
 ├── playwright.config.ts
 ├── tsconfig.json
 ├── vercel.json
@@ -102,7 +106,7 @@ Los proyectos que aún están en desarrollo se muestran como **Disponible próxi
 
 ## Ejecutar localmente
 
-Requiere Node.js 24 y npm.
+Requiere **Node.js 24** y npm.
 
 ```bash
 npm ci
@@ -124,7 +128,7 @@ npm run start
 
 ## Verificación
 
-Antes de desplegar se recomienda ejecutar:
+Antes de cada despliegue se recomienda ejecutar las principales comprobaciones del proyecto:
 
 ```bash
 npm run test
@@ -132,17 +136,74 @@ npm run lint
 npm run build
 ```
 
-El proyecto utiliza:
+Estas validaciones ayudan a comprobar que el portafolio se encuentre en un estado estable antes de publicar cambios.
 
-- Vitest
-- React Testing Library
-- Playwright
+### Pruebas unitarias
 
-Los tests principales comprueban contenido, formulario de contacto, integridad de proyectos, enlaces externos y existencia de recursos locales.
+El proyecto utiliza **Vitest** y **React Testing Library** para validar aspectos principales de la aplicación.
+
+Entre las comprobaciones actuales se incluyen:
+
+- Renderizado del contenido principal.
+- Presencia de los proyectos destacados.
+- Funcionamiento básico del formulario de contacto.
+- Generación del enlace de WhatsApp.
+- Rechazo de mensajes demasiado cortos.
+- Integridad de los slugs de proyectos.
+- Existencia de imágenes y recursos locales declarados.
+- Validación de enlaces externos.
+- Comprobación de las ocho capturas de IA Cognitiva.
+- Manejo de proyectos inexistentes.
+
+Para ejecutar las pruebas:
+
+```bash
+npm run test
+```
+
+Para obtener información detallada de cada prueba:
+
+```bash
+npm run test -- --reporter=verbose
+```
+
+### ESLint
+
+La calidad y consistencia del código se revisa mediante ESLint:
+
+```bash
+npm run lint
+```
+
+### Build de producción
+
+Antes de desplegar se genera una compilación de producción:
+
+```bash
+npm run build
+```
+
+Esto permite comprobar que Next.js pueda compilar correctamente la aplicación y generar las rutas necesarias.
+
+### Playwright
+
+El proyecto mantiene configuración de **Playwright** para pruebas de navegador.
+
+Cuando sea necesario:
+
+```bash
+npm run test:e2e
+```
+
+Si Chromium aún no se encuentra instalado:
+
+```bash
+npx playwright install chromium
+```
 
 ## Recursos de proyectos
 
-Las imágenes utilizadas por cada proyecto se almacenan dentro de:
+Las imágenes utilizadas por cada proyecto se almacenan principalmente en:
 
 ```text
 public/projects/
@@ -154,18 +215,38 @@ La configuración central de los proyectos se encuentra en:
 src/data/projects.ts
 ```
 
-Los tests verifican que las imágenes declaradas en esta configuración existan físicamente antes del despliegue.
+Los tests de integridad comprueban que los recursos declarados existan físicamente antes del despliegue.
+
+Al eliminar o renombrar una imagen también debe actualizarse su referencia en `src/data/projects.ts`.
+
+## Contacto
+
+El formulario permite ingresar:
+
+- Nombre opcional.
+- Mensaje.
+
+El botón principal se presenta como:
+
+```text
+Enviar mensaje
+```
+
+Al utilizarlo, el sitio prepara una conversación en WhatsApp con el contenido ingresado.
+
+El portafolio no almacena los mensajes enviados desde el formulario.
 
 ## Seguridad
 
 El proyecto incluye medidas básicas de seguridad para producción:
 
 - Validación de URLs externas.
-- `noopener` y `noreferrer` para enlaces externos.
+- Uso de `noopener` y `noreferrer` en enlaces externos.
 - Content Security Policy.
 - `X-Content-Type-Options`.
 - Protección contra `frame-ancestors`.
 - Eliminación del header `X-Powered-By`.
+- Serialización segura de JSON-LD.
 - Variables de entorno excluidas mediante `.gitignore`.
 
 El archivo:
@@ -174,7 +255,55 @@ El archivo:
 .env.example
 ```
 
-puede utilizarse únicamente como referencia y no debe contener credenciales reales.
+puede utilizarse como referencia de configuración, pero no debe contener contraseñas, tokens ni credenciales reales.
+
+Las variables con prefijo `NEXT_PUBLIC_` son visibles desde el navegador y no deben utilizarse para almacenar secretos.
+
+## Repositorio
+
+El proyecto utiliza Git y GitHub para control de versiones.
+
+Los archivos generados o locales no se incluyen en el repositorio:
+
+```text
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+.vercel/
+.env*
+*.tsbuildinfo
+*.log
+*.bundle
+```
+
+Antes de realizar un commit se recomienda revisar:
+
+```bash
+git status
+```
+
+Para revisar cambios específicos:
+
+```bash
+git diff
+```
+
+## Flujo de trabajo
+
+Flujo recomendado antes de publicar cambios:
+
+```bash
+npm run test
+npm run lint
+npm run build
+git status
+git add .
+git commit -m "Actualiza portafolio"
+git push
+```
 
 ## Despliegue
 
@@ -189,9 +318,9 @@ Install Command: npm ci
 Build Command: npm run build
 ```
 
-No requiere secretos para funcionar actualmente.
+El directorio de salida debe mantenerse con la configuración automática de Next.js.
 
-`SITE_URL` es opcional y, en caso de utilizarse, debe coincidir con el dominio HTTPS definitivo del portafolio.
+`SITE_URL` es opcional y, si se utiliza, debe coincidir con el dominio HTTPS definitivo del portafolio.
 
 URL principal:
 
@@ -199,45 +328,39 @@ URL principal:
 https://benjaminrumay-portafolio.vercel.app
 ```
 
-## Repositorio
+Si el dominio cambia, se recomienda revisar:
 
-El proyecto utiliza Git y GitHub para control de versiones.
+- Metadata.
+- Canonical.
+- Open Graph.
+- Sitemap.
+- Robots.
+- `SITE_URL`.
 
-Los archivos generados o locales como los siguientes no se incluyen en el repositorio:
+Cuando el repositorio está conectado con Vercel, un `push` a la rama de producción puede iniciar automáticamente un nuevo despliegue.
 
-```text
-node_modules/
-.next/
-coverage/
-playwright-report/
-test-results/
-.vercel/
-.env*
-*.log
-*.bundle
-```
+## Mantenimiento
 
-## Documentación
+Al actualizar el portafolio se recomienda revisar periódicamente:
 
-La documentación adicional del proyecto se encuentra en:
+- Información profesional.
+- Proyectos y estados.
+- Capturas y logos.
+- CV.
+- URLs externas.
+- Dependencias.
+- Tests.
+- Lint.
+- Build.
+- Responsive.
+- Metadata.
+- Seguridad.
+- Rendimiento.
 
-- [Guía del proyecto](docs/GUIA_PROYECTO.md)
-- [Validación](docs/VALIDACION.md)
-
-## Estado actual
-
-El portafolio se encuentra preparado para producción con:
-
-- Código organizado.
-- Recursos validados.
-- Tests unitarios funcionales.
-- Lint validado.
-- Build de producción validado.
-- Repositorio GitHub configurado.
-- Configuración preparada para Vercel.
+Las métricas de rendimiento pueden variar según dispositivo, navegador, red y tráfico real.
 
 ## Licencia
 
 No se ha definido una licencia específica para el proyecto.
 
-Las licencias correspondientes a tipografías, iconos y otros recursos externos se mantienen de acuerdo con sus respectivos autores y proveedores.
+Las licencias correspondientes a tipografías, iconos y demás recursos externos se mantienen de acuerdo con sus respectivos autores y proveedores.
