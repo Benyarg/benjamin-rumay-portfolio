@@ -10,8 +10,19 @@ const icons = {
   cloud: Cloud,
   tools: Wrench,
   architecture: Boxes,
-};
-const order = ['backend', 'frontend', 'database', 'cloud', 'tools', 'architecture'];
+} as const;
+
+type IconKey = keyof typeof icons;
+
+const order: IconKey[] = [
+  'backend',
+  'frontend',
+  'database',
+  'cloud',
+  'tools',
+  'architecture',
+];
+
 export function Technologies() {
   return (
     <section
@@ -26,6 +37,7 @@ export function Technologies() {
         centered
         description="Tecnologías, herramientas y prácticas que utilizo para desarrollar soluciones web estructuradas, mantenibles y preparadas para evolucionar."
       />
+
       <div className="stack-panel panel reveal">
         <div className="stack-panel-heading">
           <div>
@@ -34,15 +46,22 @@ export function Technologies() {
           </div>
           <span>Desarrollo web</span>
         </div>
+
         <div className="technologies-grid">
           {[...technologies]
-            .sort((a, b) => order.indexOf(a.icon) - order.indexOf(b.icon))
+            .sort((a, b) => {
+              const aIndex = order.indexOf(a.icon as IconKey);
+              const bIndex = order.indexOf(b.icon as IconKey);
+              return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
+            })
             .map(({ title, description, icon, items }) => {
-              const Icon = icons[icon];
+              // ✅ Fallback: si el icono no existe, usa Boxes
+              const Icon = icons[icon as IconKey] ?? Boxes;
+
               return (
                 <article
                   key={title}
-                  className={'technology-card skill-card technology-' + icon}
+                  className={`technology-card skill-card technology-${icon}`}
                 >
                   <div className="technology-heading">
                     <span className="technology-category-icon">
@@ -53,6 +72,7 @@ export function Technologies() {
                       <p>{description}</p>
                     </div>
                   </div>
+
                   <ul className="technology-items">
                     {items.map((tech) => (
                       <li key={tech} className="tech-icon-hover">

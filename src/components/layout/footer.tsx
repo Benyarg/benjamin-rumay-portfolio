@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, MapPin } from 'lucide-react';
+
 import {
   GithubIcon as Github,
   LinkedinIcon as Linkedin,
@@ -13,6 +14,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell">
         <div className="footer-grid">
+          {/* Columna 1: Marca */}
           <div className="footer-profile">
             <Link href="/" className="brand" aria-label="Benjamin Rumay, inicio">
               <Image
@@ -23,8 +25,13 @@ export function Footer() {
                 alt=""
               />
             </Link>
-            <p>Software Developer · Egresado de Ingeniería de Sistemas Computacionales</p>
+            <p>
+              Software Developer · Egresado de Ingeniería de Sistemas
+              Computacionales
+            </p>
           </div>
+
+          {/* Columna 2: Enlaces */}
           <nav aria-label="Enlaces del pie de página">
             <h2>Enlaces</h2>
             <ul>
@@ -42,9 +49,11 @@ export function Footer() {
               </li>
             </ul>
           </nav>
+
+          {/* Columna 3: Contacto */}
           <div className="footer-contact">
             <h2>Contacto</h2>
-            <a href={'mailto:' + profile.email}>
+            <a href={`mailto:${profile.email}`}>
               <Mail size={16} aria-hidden="true" />
               <span>{profile.email}</span>
             </a>
@@ -53,29 +62,34 @@ export function Footer() {
               {profile.location}
             </p>
           </div>
+
+          {/* Columna 4: Redes */}
           <div>
             <h2>Redes</h2>
             <div className="footer-socials">
               <ExternalLink
                 href={profile.linkedin}
                 className="icon-button"
-                aria-label="LinkedIn de Benjamin"
+                aria-label="LinkedIn de Benjamin Rumay"
               >
                 <Linkedin size={18} aria-hidden="true" />
               </ExternalLink>
               <ExternalLink
                 href={profile.github}
                 className="icon-button"
-                aria-label="GitHub de Benjamin"
+                aria-label="GitHub de Benjamin Rumay"
               >
                 <Github size={19} aria-hidden="true" />
               </ExternalLink>
             </div>
           </div>
         </div>
+
+        {/* Copyright */}
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Benjamin Rumay. Todos los derechos reservados.
+            © {new Date().getFullYear()} Benjamin Rumay. Todos los derechos
+            reservados.
           </p>
         </div>
       </div>

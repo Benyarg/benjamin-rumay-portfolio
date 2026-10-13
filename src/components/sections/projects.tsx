@@ -1,12 +1,10 @@
 import { projects } from '@/data/projects';
-
 import { ProjectCard } from '@/components/projects/project-card';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 export function Projects() {
-  const prominentSlug = projects.find(
-    (project) => 'featured' in project && project.featured,
-  )?.slug;
+  // ✅ Acceso seguro: usa optional chaining
+  const prominentSlug = projects.find((p) => p.featured === true)?.slug;
 
   return (
     <section

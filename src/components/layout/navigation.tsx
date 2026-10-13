@@ -24,76 +24,95 @@ export function Navigation() {
 
   useScrollLock(open);
 
+  // ============================================================
+  // Scroll spy: detecta la sección activa
+  // ============================================================
   useEffect(() => {
     if (!isHome) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries.filter((entry) => entry.isIntersecting);
-
         if (visible[0]) {
           setActive(visible[0].target.id);
         }
       },
-      {
-        rootMargin: '-15% 0px -65% 0px',
-      },
+      { rootMargin: '-15% 0px -65% 0px' },
     );
 
     [...navigation.map(({ id }) => id), 'hero'].forEach((id) => {
       const section = document.getElementById(id);
-
-      if (section) {
-        observer.observe(section);
-      }
+      if (section) observer.observe(section);
     });
 
     return () => observer.disconnect();
   }, [isHome]);
 
+  // ============================================================
+  // Cerrar menú al cambiar a desktop
+  // ✅ FIX: Verificar que el dialog esté abierto antes de cerrar
+  // ============================================================
   useEffect(() => {
     const media = window.matchMedia('(min-width: 1100px)');
 
     const closeOnDesktop = () => {
-      if (media.matches) {
-        dialog.current?.close();
+      if (media.matches && dialog.current?.open) {
+        dialog.current.close();
       }
     };
 
     media.addEventListener('change', closeOnDesktop);
-
     return () => media.removeEventListener('change', closeOnDesktop);
   }, []);
 
+  // ============================================================
+  // ✅ FIX: Handler seguro para cerrar el menú
+  // Solo cierra si el dialog está abierto (evita el bug en desktop)
+  // ============================================================
+  const handleLinkClick = () => {
+    if (dialog.current?.open) {
+      dialog.current.close();
+    }
+  };
+
+  const showMenu = () => {
+    dialog.current?.showModal();
+    setOpen(true);
+  };
+
+  const closeMenu = () => {
+    if (dialog.current?.open) {
+      dialog.current.close();
+    }
+  };
+
+  // ============================================================
+  // Links compartidos entre desktop y mobile
+  // ============================================================
   const links = navigation.map(({ id, label }) => (
     <li key={id}>
       <a
         href={`${isHome ? '' : '/'}#${id}`}
         aria-current={isHome && active === id ? 'location' : undefined}
-        onClick={() => dialog.current?.close()}
+        onClick={handleLinkClick}
       >
         {label}
       </a>
     </li>
   ));
 
-  function showMenu() {
-    dialog.current?.showModal();
-    setOpen(true);
-  }
-
-  function closeMenu() {
-    dialog.current?.close();
-  }
-
   return (
     <>
-      {/* Navegación desktop */}
+      {/* ====================================================
+          Navegación desktop
+          ==================================================== */}
       <nav aria-label="Navegación principal" className="desktop-navigation">
         <ul>{links}</ul>
       </nav>
 
-      {/* Acciones del header */}
+      {/* ====================================================
+          Acciones del header
+          ==================================================== */}
       <div className="header-actions">
         <ExternalLink
           href={profile.github}
@@ -132,7 +151,9 @@ export function Navigation() {
         </button>
       </div>
 
-      {/* Menú móvil / tablet */}
+      {/* ====================================================
+          Menú móvil / tablet
+          ==================================================== */}
       <dialog
         ref={dialog}
         id="mobile-menu"
@@ -145,7 +166,6 @@ export function Navigation() {
           }
         }}
       >
-        {/* Solo botón cerrar */}
         <div className="mobile-menu-heading">
           <button
             type="button"
@@ -157,12 +177,10 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* Links */}
         <nav aria-label="Menú móvil">
           <ul>{links}</ul>
         </nav>
 
-        {/* Redes */}
         <div className="mobile-menu-socials">
           <ExternalLink href={profile.github} className="button button-outline">
             <Github size={18} aria-hidden="true" />
@@ -175,7 +193,6 @@ export function Navigation() {
           </ExternalLink>
         </div>
 
-        {/* CV */}
         <a
           href={profile.cv}
           download

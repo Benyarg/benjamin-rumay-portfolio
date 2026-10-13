@@ -10,9 +10,11 @@ export function Hero() {
           <span aria-hidden="true" />
           Disponible para oportunidades
         </p>
+
         <h1 id="hero-title" className="hero-title">
           Benjamin Rumay
         </h1>
+
         <div className="typing-container hero-role">
           <span className="sr-only">{profile.role}</span>
           <span aria-hidden="true">
@@ -20,16 +22,19 @@ export function Hero() {
             <span className="cursor-blink">|</span>
           </span>
         </div>
+
         <p className="hero-description">
           Desarrollo soluciones web y software orientadas a{' '}
           <strong>resolver necesidades reales.</strong> Transformo ideas y procesos en
           productos digitales funcionales, mantenibles y preparados para crecer.
         </p>
+
         <ul className="hero-stack" aria-label="Tecnologías principales">
           {['C#', '.NET', 'React', 'Next.js', 'SQL'].map((tech) => (
             <li key={tech}>{tech}</li>
           ))}
         </ul>
+
         <div className="hero-buttons">
           <a href="#projects" className="button button-primary btn-ripple">
             <FolderKanban size={20} aria-hidden="true" />
@@ -41,22 +46,23 @@ export function Hero() {
           </a>
         </div>
       </div>
+
       <div className="hero-visual">
         <figure className="hero-photo">
           <div className="photo-image image-container">
             <Image
               src="/images/benjamin-rumay.webp"
-              alt="Benjamin Rumay trabajando con una laptop"
+              alt="Benjamin Rumay, Software Developer"
               width={1264}
               height={848}
-              sizes="(max-width: 639px) 170vw, (max-width: 1023px) 800px, 850px"
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 800px, 850px"
               quality={85}
-              loading="eager"
-              fetchPriority="high"
+              priority
               className="profile-image profile-photo"
             />
             <span className="image-shine" aria-hidden="true" />
           </div>
+
           <figcaption className="floating-card">
             <span className="photo-icon">
               <Terminal size={21} aria-hidden="true" />

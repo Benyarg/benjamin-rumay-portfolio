@@ -7,8 +7,13 @@ export function About() {
     { icon: Code2, text: 'Transformo ideas en productos funcionales.' },
     { icon: ListChecks, text: 'Refino cada entrega con mejora continua.' },
   ];
+
   return (
-    <section id="about" className="shell section-space" aria-labelledby="about-title">
+    <section
+      id="about"
+      className="shell section-space"
+      aria-labelledby="about-title"
+    >
       <SectionHeading
         id="about-title"
         eyebrow="Sobre mí"
@@ -16,6 +21,7 @@ export function About() {
         accent="aprendizaje continuo"
         description="Mi perfil, mi enfoque profesional y la forma en que afronto cada proyecto."
       />
+
       <div className="about-grid panel reveal">
         <article className="about-profile">
           <p className="small-label">Perfil profesional</p>
@@ -28,6 +34,7 @@ export function About() {
             Busco seguir creciendo mediante nuevos retos que me permitan fortalecer mi
             experiencia y criterio técnico.
           </p>
+
           <div className="commitment">
             <CheckCheck size={22} aria-hidden="true" />
             <div>
@@ -36,6 +43,7 @@ export function About() {
             </div>
           </div>
         </article>
+
         <article className="about-process">
           <p className="small-label">Mi forma de trabajar</p>
           <h3>Cómo abordo una solución</h3>
@@ -43,13 +51,14 @@ export function About() {
             {steps.map(({ icon: Icon, text }, i) => (
               <li key={text}>
                 <span className="step-number" aria-hidden="true">
-                  0{i + 1}
+                  {String(i + 1).padStart(2, '0')}
                 </span>
                 <Icon size={21} aria-hidden="true" />
                 <p>{text}</p>
               </li>
             ))}
           </ol>
+
           <a href="#projects" className="text-link">
             Conoce este enfoque en mis proyectos
             <ArrowUpRight size={17} aria-hidden="true" />
