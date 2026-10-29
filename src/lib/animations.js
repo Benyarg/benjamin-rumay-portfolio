@@ -499,7 +499,7 @@ export class AnimationManager {
     this.cleanups.forEach((cleanup) => {
       try {
         cleanup();
-      } catch (e) {
+      } catch {
         // Silenciar errores de cleanup para no romper React
       }
     });
