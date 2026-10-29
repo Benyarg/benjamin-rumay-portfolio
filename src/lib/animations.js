@@ -238,12 +238,7 @@ export class AnimationManager {
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
-        if (
-          this.x < 0 ||
-          this.x > canvas.width ||
-          this.y < 0 ||
-          this.y > canvas.height
-        ) {
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
           this.reset();
         }
       }

@@ -9,11 +9,7 @@ export function About() {
   ];
 
   return (
-    <section
-      id="about"
-      className="shell section-space"
-      aria-labelledby="about-title"
-    >
+    <section id="about" className="shell section-space" aria-labelledby="about-title">
       <SectionHeading
         id="about-title"
         eyebrow="Sobre mí"

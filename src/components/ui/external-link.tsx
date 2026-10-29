@@ -16,12 +16,7 @@ export function ExternalLink({ href, children, ...props }: Props) {
   }
 
   return (
-    <a
-      {...props}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a {...props} href={href} target="_blank" rel="noopener noreferrer">
       {children}
       <span className="sr-only"> (abre en otra pestaña)</span>
     </a>

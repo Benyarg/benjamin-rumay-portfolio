@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
-> *“El software no solo debe resolver problemas, debe sentirse vivo, intuitivo y visualmente impecable.”*
+> _“El software no solo debe resolver problemas, debe sentirse vivo, intuitivo y visualmente impecable.”_
 
 Este proyecto es un **ecosistema digital de alta gama** diseñado para posicionar mi perfil como Software Developer. No es solo una landing page: es una vitrina técnica y visual desarrollada con **Next.js 16**, concebida para fusionar la ingeniería de software robusta con una experiencia de usuario (UI/UX) de nivel premium.
 
@@ -36,7 +36,7 @@ Este proyecto es un **ecosistema digital de alta gama** diseñado para posiciona
 
 Cada decisión visual está alineada con la identidad de la marca personal **BR**:
 
-- **Paleta de colores:** fondo oscuro profundo (`#121414`) para reducir la fatiga visual, contrastado con azul eléctrico (`#0070f3`) y azul suave (`#aec6ff`) que dirigen la atención hacia los CTA (*Call to Action*).
+- **Paleta de colores:** fondo oscuro profundo (`#121414`) para reducir la fatiga visual, contrastado con azul eléctrico (`#0070f3`) y azul suave (`#aec6ff`) que dirigen la atención hacia los CTA (_Call to Action_).
 - **Tipografía editorial:** la fuente **Inter**, con variables de peso, aporta una apariencia tecnológica y moderna. Los acentos de estilo `code` refuerzan la identidad de desarrollador.
 - **Glassmorphism:** tarjetas con efectos de desenfoque (`backdrop-blur`) y bordes sutiles semitransparentes, que aportan profundidad sin sacrificar el rendimiento.
 - **Alineación precisa:** sistema de cuadrícula basado en CSS Grid para mantener el contenido equilibrado y una jerarquía visual clara.
@@ -47,9 +47,9 @@ Cada decisión visual está alineada con la identidad de la marca personal **BR*
 
 ### ✨ Animaciones e interacciones nativas
 
-- **Intersection Observer:** animaciones de aparición (*reveal*, `fade-up` y `staggered`) que se activan eficientemente cuando el usuario hace scroll.
+- **Intersection Observer:** animaciones de aparición (_reveal_, `fade-up` y `staggered`) que se activan eficientemente cuando el usuario hace scroll.
 - **Efectos de partículas y typing:** Canvas API optimizado para un fondo dinámico y un efecto de máquina de escribir en el Hero.
-- **Microinteracciones:** efectos *hover* 3D (*Jelly*), bordes iluminados que siguen al cursor y *scroll spy* en el encabezado.
+- **Microinteracciones:** efectos _hover_ 3D (_Jelly_), bordes iluminados que siguen al cursor y _scroll spy_ en el encabezado.
 - **Accesibilidad de movimiento:** control para pausar animaciones y compatibilidad con la media query `prefers-reduced-motion`.
 
 ### 📱 Responsive design extremo
@@ -67,7 +67,7 @@ El diseño se plantea desde **Mobile First** hasta pantallas de gran formato:
 ### 🔍 SEO y rendimiento
 
 - **SEO técnico:** metadata dinámica, Canonical URLs, Open Graph, Twitter Cards, JSON-LD ([Schema.org](https://schema.org/)) y generación de `sitemap` y `robots`.
-- **Carga optimizada:** uso de `next/image` para optimización y carga diferida, y `next/font` para evitar desplazamientos de diseño (*layout shift*).
+- **Carga optimizada:** uso de `next/image` para optimización y carga diferida, y `next/font` para evitar desplazamientos de diseño (_layout shift_).
 
 ---
 
@@ -101,7 +101,7 @@ La estructura está modularizada para facilitar la escalabilidad y el mantenimie
 
 ## 🧠 Decisiones de ingeniería
 
-1. **Animaciones CSS nativas frente a librerías pesadas:** se eligieron CSS y Canvas API en lugar de Framer Motion o GSAP. Esto ayuda a reducir el tamaño del *bundle*, mejorar el tiempo hasta la interactividad (TTI) y evitar problemas de hidratación en React.
+1. **Animaciones CSS nativas frente a librerías pesadas:** se eligieron CSS y Canvas API en lugar de Framer Motion o GSAP. Esto ayuda a reducir el tamaño del _bundle_, mejorar el tiempo hasta la interactividad (TTI) y evitar problemas de hidratación en React.
 2. **Tipado estricto con TypeScript:** los datos de proyectos (`src/data/projects.ts`) están fuertemente tipados. Una estructura incorrecta se detecta durante la compilación, antes de llegar a producción.
 3. **Seguridad y validación:** validación estricta de URLs externas, Content Security Policy (CSP) para mitigar riesgos de inyección XSS y pruebas unitarias que verifican la existencia de los recursos de imagen declarados en los datos.
 4. **Gestión de estado sin Redux:** el estado compartido de la interfaz —como el menú móvil o el bloqueo del scroll— se maneja con Context API y hooks personalizados, manteniendo el código organizado y evitando dependencias adicionales para el estado.
@@ -112,11 +112,11 @@ La estructura está modularizada para facilitar la escalabilidad y el mantenimie
 
 El portafolio presenta soluciones desarrolladas con distintas tecnologías:
 
-- **Detalles Belis** — *En producción.* Landing page para un emprendimiento de regalos personalizados, con catálogo visual responsive y contacto directo.
-- **Atrium Academy** — *En producción.* Plataforma de aprendizaje (*e-learning*) con catálogo de cursos, seguimiento del progreso y panel administrativo.
-- **IA Cognitiva** — *Finalizado · Demo en Azure.* Plataforma académica de investigación que integra evaluaciones cognitivas con Machine Learning. Incluye una galería con ocho capturas del sistema real.
-- **PlanorIA** — *En desarrollo.* Plataforma educativa con inteligencia artificial, flashcards y quizzes.
-- **Kaphiy** — *En desarrollo.* Sistema web y móvil para gestionar pedidos, inventario y ventas.
+- **Detalles Belis** — _En producción._ Landing page para un emprendimiento de regalos personalizados, con catálogo visual responsive y contacto directo.
+- **Atrium Academy** — _En producción._ Plataforma de aprendizaje (_e-learning_) con catálogo de cursos, seguimiento del progreso y panel administrativo.
+- **IA Cognitiva** — _Finalizado · Demo en Azure._ Plataforma académica de investigación que integra evaluaciones cognitivas con Machine Learning. Incluye una galería con ocho capturas del sistema real.
+- **PlanorIA** — _En desarrollo._ Plataforma educativa con inteligencia artificial, flashcards y quizzes.
+- **Kaphiy** — _En desarrollo._ Sistema web y móvil para gestionar pedidos, inventario y ventas.
 
 > Los proyectos en desarrollo se muestran con el estado **“Disponible próximamente”** y no incluyen botón de demo.
 
@@ -128,7 +128,7 @@ El proyecto cuenta con un flujo de validación antes de cada despliegue.
 
 ### Pruebas unitarias — Vitest + React Testing Library
 
-Validan el renderizado principal, la integridad de las rutas de imágenes, la generación de URLs de WhatsApp y el manejo de *slugs* inexistentes.
+Validan el renderizado principal, la integridad de las rutas de imágenes, la generación de URLs de WhatsApp y el manejo de _slugs_ inexistentes.
 
 ```bash
 npm run test

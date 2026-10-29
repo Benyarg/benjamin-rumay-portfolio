@@ -31,10 +31,7 @@ export function Services() {
           const Icon = icons[icon as IconKey] ?? AppWindow;
 
           return (
-            <article
-              key={title}
-              className="panel service-card glass-card reveal"
-            >
+            <article key={title} className="panel service-card glass-card reveal">
               <div className="service-meta">
                 <span className="service-number">
                   {String(index + 1).padStart(2, '0')}

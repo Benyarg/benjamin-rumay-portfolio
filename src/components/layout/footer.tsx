@@ -25,10 +25,7 @@ export function Footer() {
                 alt=""
               />
             </Link>
-            <p>
-              Software Developer · Egresado de Ingeniería de Sistemas
-              Computacionales
-            </p>
+            <p>Software Developer · Egresado de Ingeniería de Sistemas Computacionales</p>
           </div>
 
           {/* Columna 2: Enlaces */}
@@ -88,8 +85,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Benjamin Rumay. Todos los derechos
-            reservados.
+            © {new Date().getFullYear()} Benjamin Rumay. Todos los derechos reservados.
           </p>
         </div>
       </div>
