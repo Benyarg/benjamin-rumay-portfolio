@@ -32,8 +32,8 @@ export default defineConfig({
   webServer: {
     // Si estamos en GitHub Actions, NO compilamos de nuevo (ya se hizo antes)
     // Si estamos en local, sí compilamos.
-    command: process.env.CI 
-      ? 'npm run start -- --hostname 127.0.0.1 --port 3100' 
+    command: process.env.CI
+      ? 'npm run start -- --hostname 127.0.0.1 --port 3100'
       : 'npm run build && npm run start -- --hostname 127.0.0.1 --port 3100',
     url: 'http://127.0.0.1:3100',
     reuseExistingServer: !process.env.CI,
