@@ -1,4 +1,4 @@
-# 🚀 Benjamin Rumay · Portafolio Premium | Software Developer
+# 🚀 Benjamin Rumay - Portafolio | Software Developer
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16" />
@@ -185,7 +185,7 @@ Las métricas de rendimiento de Lighthouse pueden variar según el dispositivo, 
 
 ---
 
-## 💎 Conclusión
+## 📑 Conclusión
 
 Este portafolio representa la unión entre **ingeniería de software estructurada** y **diseño de interfaces premium**. Cada parte, desde la lógica de las animaciones hasta la configuración SEO, está pensada para demostrar no solo lo que sé hacer, sino cómo lo hago: con atención al detalle, rendimiento, accesibilidad y pasión por el desarrollo web.
 
