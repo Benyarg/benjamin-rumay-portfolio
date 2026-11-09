@@ -84,11 +84,6 @@ export function ContactForm() {
         />
       </div>
 
-      <p id="contact-help" className="form-help">
-        Entre 10 y 2000 caracteres. Este sitio no almacena tu mensaje; se abrirá WhatsApp
-        para que puedas revisarlo y enviarlo.
-      </p>
-
       {error && (
         <p id="contact-error" className="form-error" role="alert">
           {error}

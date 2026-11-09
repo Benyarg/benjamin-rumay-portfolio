@@ -2,31 +2,29 @@ import type { Experience } from '@/types/portfolio';
 
 export const experience = [
   {
-    role: 'Practicante de Desarrollo de Software',
-    company: 'GEOGAM SPA',
-    area: 'Desarrollo de software',
-    tags: ['Desarrollo web', 'UI/UX', 'Scrum'],
-    location: 'Santiago de Chile',
-    period: 'Ene 2025 – Dic 2025',
-    description:
-      'Participé en el desarrollo y mantenimiento de plataformas web para clientes B2B, colaborando también en diseño de interfaces y entregas iterativas.',
+    role: "Practicante de Desarrollo de Software",
+    company: "GEOGAM SPA",
+    location: "Santiago de Chile",
+    period: "Ene 2025 – Dic 2025",
+    area: "Desarrollo de Software",
+    description: "Desarrollé y mantuve plataformas web B2B, mejorando la experiencia de usuario y adaptando soluciones al negocio.",
     responsibilities: [
-      'Desarrollo de funcionalidades web de principio a fin según los requerimientos del negocio.',
-      'Diseño de interfaces UI/UX y colaboración en entregas bajo metodologías ágiles.',
+      "Desarrollo de funcionalidades web end-to-end.",
+      "Diseño de interfaces UI/UX bajo metodologías ágiles."
     ],
+    tags: ["Desarrollo web", "UI/UX", "Scrum"]
   },
   {
-    role: 'Analista de Procesos y TI',
-    company: 'Polarizados J&R',
-    area: 'Procesos y tecnología',
-    tags: ['BPM', 'Análisis de procesos', 'Mejora continua'],
-    location: 'Cajamarca, Perú',
-    period: 'Ene 2024 – Dic 2024',
-    description:
-      'Analicé y documenté procesos de negocio, levantando requerimientos e identificando oportunidades de mejora operativa.',
+    role: "Analista de Procesos y TI",
+    company: "Polarizados J&R",
+    location: "Cajamarca, Perú",
+    period: "Ene 2024 – Dic 2024",
+    area: "Análisis de Procesos",
+    description: "Optimicé procesos operativos en el sector industrial mediante el análisis, documentación y propuesta de mejoras.",
     responsibilities: [
-      'Análisis de procesos mediante BPM y documentación de requerimientos.',
-      'Identificación de mejoras en procesos de venta y producción.',
+      "Modelamiento de procesos BPM y diagramas de flujo.",
+      "Levantamiento de requerimientos y soporte técnico."
     ],
-  },
-] satisfies Experience[];
+    tags: ["BPM", "Análisis de Procesos", "Soporte TI"]
+  }
+];

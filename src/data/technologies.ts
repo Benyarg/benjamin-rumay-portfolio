@@ -33,6 +33,6 @@ export const technologies = [
     title: 'Arquitectura y prácticas',
     description: 'Organización y mantenimiento del código',
     icon: 'architecture',
-    items: ['Clean Architecture', 'MVC', 'Arquitectura en capas', 'APIs REST', 'SOLID'],
+    items: ['Clean Architecture', 'Arquitectura en capas', 'APIs REST', 'SOLID', 'MVC'],
   },
 ] as const;

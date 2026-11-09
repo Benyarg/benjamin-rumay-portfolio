@@ -7,6 +7,7 @@ export const profile = {
   whatsapp: '51984030284',
   github: 'https://github.com/Benyarg',
   linkedin: 'https://www.linkedin.com/in/jhoel-benjamin-rumay-garc%C3%ADa-48711a191/',
+  instagram: 'https://www.instagram.com/benjaminrumay.dev?srtk=NmV0YWc0eGI4OHJv&utm_source=qr',
   cv: '/docs/benjamin-rumay-cv.pdf',
   introduction:
     'Desarrollo soluciones web y software orientadas a resolver necesidades reales.',

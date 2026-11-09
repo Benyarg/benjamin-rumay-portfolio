@@ -7,6 +7,7 @@ import { Download, Menu, X } from 'lucide-react';
 import {
   GithubIcon as Github,
   LinkedinIcon as Linkedin,
+  InstagramIcon as Instagram,
 } from '@/components/ui/brand-icons';
 
 import { navigation, profile } from '@/data/profile';
@@ -50,7 +51,6 @@ export function Navigation() {
 
   // ============================================================
   // Cerrar menú al cambiar a desktop
-  // ✅ FIX: Verificar que el dialog esté abierto antes de cerrar
   // ============================================================
   useEffect(() => {
     const media = window.matchMedia('(min-width: 1100px)');
@@ -66,7 +66,6 @@ export function Navigation() {
   }, []);
 
   // ============================================================
-  // ✅ FIX: Handler seguro para cerrar el menú
   // Solo cierra si el dialog está abierto (evita el bug en desktop)
   // ============================================================
   const handleLinkClick = () => {
@@ -114,21 +113,7 @@ export function Navigation() {
           Acciones del header
           ==================================================== */}
       <div className="header-actions">
-        <ExternalLink
-          href={profile.github}
-          className="icon-button header-github"
-          aria-label="GitHub de Benjamin Rumay"
-        >
-          <Github size={19} aria-hidden="true" />
-        </ExternalLink>
-
-        <ExternalLink
-          href={profile.linkedin}
-          className="icon-button header-linkedin"
-          aria-label="LinkedIn de Benjamin Rumay"
-        >
-          <Linkedin size={19} aria-hidden="true" />
-        </ExternalLink>
+        
 
         <a
           href={profile.cv}
@@ -190,6 +175,11 @@ export function Navigation() {
           <ExternalLink href={profile.linkedin} className="button button-outline">
             <Linkedin size={18} aria-hidden="true" />
             LinkedIn
+          </ExternalLink>
+
+          <ExternalLink href={profile.instagram} className="button button-outline">
+            <Instagram size={18} aria-hidden="true" />
+            Instagram
           </ExternalLink>
         </div>
 

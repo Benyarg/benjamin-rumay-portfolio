@@ -5,6 +5,7 @@ import { Mail, MapPin } from 'lucide-react';
 import {
   GithubIcon as Github,
   LinkedinIcon as Linkedin,
+  InstagramIcon as Instagram,
 } from '@/components/ui/brand-icons';
 import { profile } from '@/data/profile';
 import { ExternalLink } from '@/components/ui/external-link';
@@ -77,6 +78,13 @@ export function Footer() {
                 aria-label="GitHub de Benjamin Rumay"
               >
                 <Github size={19} aria-hidden="true" />
+              </ExternalLink>
+              <ExternalLink
+                href={profile.instagram}
+                className="icon-button"
+                aria-label="Instagram de Benjamin Rumay"
+              >
+                <Instagram size={19} aria-hidden="true" />
               </ExternalLink>
             </div>
           </div>
