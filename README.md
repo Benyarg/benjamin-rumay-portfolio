@@ -1,198 +1,189 @@
-# 🚀 Benjamin Rumay - Portafolio | Software Developer
+# 🚀 Benjamin Rumay | Software Developer Portfolio
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16" />
   <img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" /></a>
 </p>
 
-> _“El software no solo debe resolver problemas, debe sentirse vivo, intuitivo y visualmente impecable.”_
-
-Este proyecto es un **ecosistema digital de alta gama** diseñado para posicionar mi perfil como Software Developer. No es solo una landing page: es una vitrina técnica y visual desarrollada con **Next.js 16**, concebida para fusionar la ingeniería de software robusta con una experiencia de usuario (UI/UX) de nivel premium.
+> Portafolio personal desarrollado para presentar mi perfil profesional, experiencia y proyectos mediante una experiencia web moderna, accesible y responsive.
 
 <p align="center">
   <img src="docs/capturas/desktop.png" alt="Vista de escritorio del portafolio de Benjamin Rumay" width="100%" />
 </p>
 
----
-
-## 📑 Tabla de contenidos
-
-- [🎨 Filosofía de diseño (UI/UX)](#-filosofía-de-diseño-uiux)
-- [⚡ Características técnicas destacadas](#-características-técnicas-destacadas)
-- [🏗️ Arquitectura del código](#️-arquitectura-del-código)
-- [🧠 Decisiones de ingeniería](#-decisiones-de-ingeniería)
-- [🚀 Proyectos destacados](#-proyectos-destacados)
-- [🛠️ Desarrollo y validación](#️-desarrollo-y-validación-calidad-de-código)
-- [🔒 Seguridad y variables de entorno](#-seguridad-y-variables-de-entorno)
-- [🌐 Despliegue y mantenimiento](#-despliegue-y-mantenimiento)
-- [💎 Conclusión](#-conclusión)
+<p align="center">
+  <a href="https://benjaminrumay-portafolio.vercel.app">Ver sitio web</a>
+</p>
 
 ---
 
-## 🎨 Filosofía de diseño (UI/UX)
+## 📑 Contenido
 
-Cada decisión visual está alineada con la identidad de la marca personal **BR**:
-
-- **Paleta de colores:** fondo oscuro profundo (`#121414`) para reducir la fatiga visual, contrastado con azul eléctrico (`#0070f3`) y azul suave (`#aec6ff`) que dirigen la atención hacia los CTA (_Call to Action_).
-- **Tipografía editorial:** la fuente **Inter**, con variables de peso, aporta una apariencia tecnológica y moderna. Los acentos de estilo `code` refuerzan la identidad de desarrollador.
-- **Glassmorphism:** tarjetas con efectos de desenfoque (`backdrop-blur`) y bordes sutiles semitransparentes, que aportan profundidad sin sacrificar el rendimiento.
-- **Alineación precisa:** sistema de cuadrícula basado en CSS Grid para mantener el contenido equilibrado y una jerarquía visual clara.
-
----
-
-## ⚡ Características técnicas destacadas
-
-### ✨ Animaciones e interacciones nativas
-
-- **Intersection Observer:** animaciones de aparición (_reveal_, `fade-up` y `staggered`) que se activan eficientemente cuando el usuario hace scroll.
-- **Efectos de partículas y typing:** Canvas API optimizado para un fondo dinámico y un efecto de máquina de escribir en el Hero.
-- **Microinteracciones:** efectos _hover_ 3D (_Jelly_), bordes iluminados que siguen al cursor y _scroll spy_ en el encabezado.
-- **Accesibilidad de movimiento:** control para pausar animaciones y compatibilidad con la media query `prefers-reduced-motion`.
-
-### 📱 Responsive design extremo
-
-El diseño se plantea desde **Mobile First** hasta pantallas de gran formato:
-
-- **iPhone SE:** ajustes precisos de tipografía y espaciado para evitar la saturación visual.
-- **iPad Pro de 13 pulgadas:** reorganización de cuadrículas para aprovechar el espacio horizontal.
-- **Monitores 2K/4K de 27 pulgadas:** uso de `max-width` controlado y escalado tipográfico con `clamp()` para evitar que el diseño se vea estirado.
-
-### 🎯 Optimización de conversión
-
-- **Integración dinámica con WhatsApp:** el formulario no almacena datos en el servidor. Al enviarlo, empaqueta el nombre, el motivo de contacto y el mensaje, y abre la API de WhatsApp con un texto predefinido y formateado para facilitar una comunicación inmediata.
-
-### 🔍 SEO y rendimiento
-
-- **SEO técnico:** metadata dinámica, Canonical URLs, Open Graph, Twitter Cards, JSON-LD ([Schema.org](https://schema.org/)) y generación de `sitemap` y `robots`.
-- **Carga optimizada:** uso de `next/image` para optimización y carga diferida, y `next/font` para evitar desplazamientos de diseño (_layout shift_).
+- [Descripción](#-descripción)
+- [Características](#-características-principales)
+- [Tecnologías](#️-tecnologías)
+- [Arquitectura](#️-arquitectura-del-proyecto)
+- [Proyectos destacados](#-proyectos-destacados)
+- [Instalación y ejecución](#-instalación-y-ejecución)
+- [Pruebas y calidad](#-pruebas-y-calidad)
+- [Seguridad y SEO](#-seguridad-y-seo)
+- [Despliegue](#-despliegue)
+- [Licencia](#-licencia)
 
 ---
 
-## 🏗️ Arquitectura del código
+## 📖 Descripción
 
-La estructura está modularizada para facilitar la escalabilidad y el mantenimiento:
+Este portafolio reúne mi perfil como **Software Developer** y una selección de proyectos desarrollados con distintas tecnologías. Está construido con **Next.js 16, React 19 y TypeScript**, priorizando una arquitectura modular, rendimiento, accesibilidad y una interfaz visual coherente.
+
+El sitio combina diseño responsive, animaciones optimizadas, navegación intuitiva y contenido estructurado para mostrar proyectos, habilidades y experiencia de forma clara en dispositivos móviles y de escritorio.
+
+## ✨ Características principales
+
+- **Diseño UI/UX:** identidad visual basada en tonos oscuros, acentos azules, tipografía Inter y componentes con efectos sutiles de glassmorphism.
+- **Responsive design:** enfoque Mobile First con ajustes para smartphones, tablets, laptops y pantallas de alta resolución.
+- **Animaciones e interacciones:** efectos de entrada mediante `IntersectionObserver`, partículas con Canvas API, typing effect, microinteracciones y navegación activa por secciones.
+- **Accesibilidad:** compatibilidad con `prefers-reduced-motion` y control para pausar animaciones.
+- **Contacto con WhatsApp:** formulario que genera un mensaje estructurado y abre WhatsApp sin almacenar los datos en un servidor.
+- **SEO técnico:** metadatos, canonical URL, Open Graph, Twitter Cards, datos estructurados JSON-LD, `sitemap.xml` y `robots.txt`.
+- **Optimización de recursos:** uso de `next/image` y `next/font` para gestionar imágenes y tipografías.
+- **Código mantenible:** componentes reutilizables, TypeScript estricto, hooks personalizados y separación de datos y lógica.
+
+## 🛠️ Tecnologías
+
+| Tecnología | Aplicación |
+| --- | --- |
+| **Next.js 16** | Framework, App Router y renderizado de la aplicación |
+| **React 19** | Componentes e interfaces interactivas |
+| **TypeScript** | Tipado estático y seguridad en el desarrollo |
+| **Tailwind CSS 4** | Estilos y diseño responsive |
+| **CSS / Canvas API** | Animaciones, efectos visuales y partículas |
+| **Vitest** | Pruebas unitarias |
+| **React Testing Library** | Pruebas de componentes e interacción |
+| **Playwright** | Pruebas end-to-end (E2E) con Chromium |
+| **ESLint** | Análisis estático y consistencia del código |
+| **Vercel** | Despliegue y publicación |
+| **Git & GitHub** | Control de versiones y alojamiento del repositorio |
+
+## 🏗️ Arquitectura del proyecto
+
+La aplicación está organizada por responsabilidades para facilitar su mantenimiento y evolución:
 
 ```text
 .
-├── .github/                 # Flujos de CI/CD y configuración de GitHub
+├── .github/                 # Configuración y flujos de GitHub
 ├── docs/
-│   └── capturas/            # Imágenes y recursos para documentación
+│   └── capturas/            # Capturas para la documentación
 ├── public/
-│   └── projects/            # Imágenes estáticas optimizadas de los proyectos
+│   └── projects/            # Imágenes de los proyectos
 ├── src/
-│   ├── app/                 # App Router: layouts, páginas y CSS global
-│   ├── components/          # Componentes UI y secciones (Hero, About, Projects...)
-│   ├── data/                # Datos de proyectos, certificaciones y perfil
-│   ├── hooks/               # Hooks personalizados (por ejemplo, scroll lock)
-│   ├── lib/                 # Utilidades, validaciones y lógica de animaciones
-│   └── types/               # Interfaces y tipos de TypeScript
+│   ├── app/                 # App Router, páginas y estilos globales
+│   ├── components/          # Componentes y secciones de la interfaz
+│   ├── data/                # Información de proyectos, perfil y certificaciones
+│   ├── hooks/               # Hooks personalizados
+│   ├── lib/                 # Utilidades y lógica compartida
+│   └── types/               # Tipos e interfaces de TypeScript
 ├── tests/
-│   └── unit/                # Pruebas automatizadas con Vitest
-└── Archivos de configuración
-    ├── next.config.ts
-    ├── playwright.config.ts
-    └── ...
+│   └── unit/                # Pruebas unitarias
+├── .env.example             # Referencia de variables de entorno
+├── LICENSE                 # Licencia del proyecto
+├── next.config.ts           # Configuración de Next.js
+├── playwright.config.ts     # Configuración de Playwright
+└── package.json             # Dependencias y scripts
 ```
-
----
-
-## 🧠 Decisiones de ingeniería
-
-1. **Animaciones CSS nativas frente a librerías pesadas:** se eligieron CSS y Canvas API en lugar de Framer Motion o GSAP. Esto ayuda a reducir el tamaño del _bundle_, mejorar el tiempo hasta la interactividad (TTI) y evitar problemas de hidratación en React.
-2. **Tipado estricto con TypeScript:** los datos de proyectos (`src/data/projects.ts`) están fuertemente tipados. Una estructura incorrecta se detecta durante la compilación, antes de llegar a producción.
-3. **Seguridad y validación:** validación estricta de URLs externas, Content Security Policy (CSP) para mitigar riesgos de inyección XSS y pruebas unitarias que verifican la existencia de los recursos de imagen declarados en los datos.
-4. **Gestión de estado sin Redux:** el estado compartido de la interfaz —como el menú móvil o el bloqueo del scroll— se maneja con Context API y hooks personalizados, manteniendo el código organizado y evitando dependencias adicionales para el estado.
-
----
 
 ## 🚀 Proyectos destacados
 
-El portafolio presenta soluciones desarrolladas con distintas tecnologías:
+| Proyecto | Descripción | Estado |
+| --- | --- | --- |
+| **Detalles Belis** | Landing page para un emprendimiento de regalos personalizados, con catálogo y contacto por WhatsApp. | En producción |
+| **Atrium Academy** | Plataforma e-learning con catálogo de cursos, seguimiento del progreso y panel administrativo. | En producción |
+| **IA Cognitiva** | Plataforma académica que integra evaluaciones cognitivas y Machine Learning. | Finalizado · Demo en Azure |
+| **PlanorIA** | Plataforma educativa con inteligencia artificial, flashcards y cuestionarios. | En desarrollo |
+| **Kaphiy** | Sistema web y móvil para la gestión de pedidos, inventario y ventas. | En desarrollo |
 
-- **Detalles Belis** — _En producción._ Landing page para un emprendimiento de regalos personalizados, con catálogo visual responsive y contacto directo.
-- **Atrium Academy** — _En producción._ Plataforma de aprendizaje (_e-learning_) con catálogo de cursos, seguimiento del progreso y panel administrativo.
-- **IA Cognitiva** — _Finalizado · Demo en Azure._ Plataforma académica de investigación que integra evaluaciones cognitivas con Machine Learning. Incluye una galería con ocho capturas del sistema real.
-- **PlanorIA** — _En desarrollo._ Plataforma educativa con inteligencia artificial, flashcards y quizzes.
-- **Kaphiy** — _En desarrollo._ Sistema web y móvil para gestionar pedidos, inventario y ventas.
+Los proyectos en desarrollo se presentan como **próximamente** y no incluyen enlaces de demostración hasta que estén disponibles.
 
-> Los proyectos en desarrollo se muestran con el estado **“Disponible próximamente”** y no incluyen botón de demo.
+## 💻 Instalación y ejecución
 
----
+### Requisitos
 
-## 🛠️ Desarrollo y validación (calidad de código)
+- Node.js y npm.
+- Git.
 
-El proyecto cuenta con un flujo de validación antes de cada despliegue.
+### Configuración local
 
-### Pruebas unitarias — Vitest + React Testing Library
+1. Clona el repositorio:
 
-Validan el renderizado principal, la integridad de las rutas de imágenes, la generación de URLs de WhatsApp y el manejo de _slugs_ inexistentes.
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   ```
 
-```bash
-npm run test
-```
+2. Accede al directorio del proyecto:
 
-### ESLint — calidad de código
+   ```bash
+   cd <CARPETA_DEL_PROYECTO>
+   ```
 
-Revisa la consistencia del código y el cumplimiento de buenas prácticas.
+3. Instala las dependencias:
 
-```bash
-npm run lint
-```
+   ```bash
+   npm install
+   ```
 
-### Build de producción
+4. Configura las variables de entorno tomando como referencia `.env.example`, si corresponde.
 
-Verifica que Next.js y Turbopack compilen el proyecto sin errores.
+5. Inicia el servidor de desarrollo:
 
-```bash
-npm run build
-```
+   ```bash
+   npm run dev
+   ```
 
-### Playwright — pruebas end-to-end (E2E)
+6. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-Configurado para ejecutar pruebas en navegador con Chromium.
+> Sustituye `<URL_DEL_REPOSITORIO>` y `<CARPETA_DEL_PROYECTO>` por los datos reales del repositorio.
 
-```bash
-npm run test:e2e
-```
+## 🧪 Pruebas y calidad
 
----
+El proyecto incluye herramientas para validar componentes, mantener la consistencia del código y comprobar el build de producción.
 
-## 🔒 Seguridad y variables de entorno
+| Proceso | Comando | Propósito |
+| --- | --- | --- |
+| Pruebas unitarias | `npm run test` | Verificar componentes, utilidades y comportamientos principales |
+| Análisis de código | `npm run lint` | Detectar problemas y mantener convenciones |
+| Build | `npm run build` | Comprobar la compilación de producción |
+| Pruebas E2E | `npm run test:e2e` | Validar flujos en navegador con Playwright |
 
-El proyecto implementa medidas de protección para producción:
+## 🔒 Seguridad y SEO
 
-- Validación de URLs externas y uso de `noopener` / `noreferrer`.
-- Headers de seguridad: `X-Content-Type-Options`, `frame-ancestors` y eliminación de `X-Powered-By`.
-- Serialización segura de JSON-LD.
-- El archivo `.env.example` sirve como referencia para configurar las variables de entorno. Las variables con prefijo `NEXT_PUBLIC_` son visibles en el cliente; **no deben contener secretos**.
+- Validación de URLs externas y uso de `noopener` / `noreferrer` cuando corresponde.
+- Cabeceras de seguridad, incluyendo `X-Content-Type-Options` y políticas de control de contenido.
+- Serialización segura de datos JSON-LD.
+- Metadatos para buscadores y redes sociales, canonical URL y archivos de rastreo.
+- `.env.example` como referencia de configuración. Las variables `NEXT_PUBLIC_*` se exponen al navegador y no deben contener credenciales ni secretos.
 
----
+## 🌐 Despliegue
 
-## 🌐 Despliegue y mantenimiento
+El sitio está publicado en **Vercel**:
 
-El despliegue está automatizado mediante **Vercel**. Cada `push` a la rama `main` inicia el proceso de build.
+**[benjaminrumay-portafolio.vercel.app](https://benjaminrumay-portafolio.vercel.app)**
 
-**URL principal:** [benjaminrumay-portafolio.vercel.app](https://benjaminrumay-portafolio.vercel.app)
+El flujo de despliegue está integrado con el repositorio. Los cambios enviados a la rama `main` activan el proceso de construcción y publicación configurado en Vercel.
 
-### Mantenimiento
+Para actualizar los proyectos o certificaciones, revisa que las rutas de las imágenes en `public/projects/` coincidan con los datos definidos en `src/data/projects.ts`.
 
-Al actualizar proyectos o certificaciones, comprueba que las imágenes de `public/projects/` coincidan con las rutas declaradas en `src/data/projects.ts`.
+## 📄 Licencia
 
-Las métricas de rendimiento de Lighthouse pueden variar según el dispositivo, el navegador y la conexión del usuario.
-
----
-
-## 📑 Conclusión
-
-Este portafolio representa la unión entre **ingeniería de software estructurada** y **diseño de interfaces premium**. Cada parte, desde la lógica de las animaciones hasta la configuración SEO, está pensada para demostrar no solo lo que sé hacer, sino cómo lo hago: con atención al detalle, rendimiento, accesibilidad y pasión por el desarrollo web.
+Este proyecto se distribuye bajo la licencia **MIT**. Consulta el archivo [LICENSE](./LICENSE) para conocer los términos de uso, modificación y distribución.
 
 ---
 
 <p align="center">
-  <i>Construido con dedicación, café y buenas prácticas de código.</i>
+  Desarrollado por <strong>Benjamin Rumay</strong>
   <br />
-  <strong>© 2026 Benjamin Rumay</strong>
+  <a href="https://benjaminrumay-portafolio.vercel.app">Portafolio web</a>
 </p>
