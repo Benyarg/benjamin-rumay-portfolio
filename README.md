@@ -1,10 +1,14 @@
 # 🚀 Benjamin Rumay | Software Developer Portfolio
 
+<div align="center">
+
 ![Next.js](https://img.shields.io/badge/Next.js-16.4.3-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.3.0-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+</div>
 
 > **"Transformo ideas y procesos en soluciones digitales funcionales, mantenibles y preparadas para crecer."**
 >
