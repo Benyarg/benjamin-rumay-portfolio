@@ -13,7 +13,7 @@ import { ExternalLink } from '@/components/ui/external-link';
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="shell">
+      <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
         <div className="footer-grid">
           {/* Columna 1: Marca */}
           <div className="footer-profile">
@@ -33,18 +33,10 @@ export function Footer() {
           <nav aria-label="Enlaces del pie de página">
             <h2>Enlaces</h2>
             <ul>
-              <li>
-                <Link href="/#about">Sobre mí</Link>
-              </li>
-              <li>
-                <Link href="/#projects">Proyectos</Link>
-              </li>
-              <li>
-                <Link href="/#experience">Experiencia</Link>
-              </li>
-              <li>
-                <Link href="/#contact">Contacto</Link>
-              </li>
+              <li><Link href="/#about">Sobre mí</Link></li>
+              <li><Link href="/#projects">Proyectos</Link></li>
+              <li><Link href="/#experience">Experiencia</Link></li>
+              <li><Link href="/#contact">Contacto</Link></li>
             </ul>
           </nav>
 
@@ -65,25 +57,13 @@ export function Footer() {
           <div>
             <h2>Redes</h2>
             <div className="footer-socials">
-              <ExternalLink
-                href={profile.linkedin}
-                className="icon-button"
-                aria-label="LinkedIn de Benjamin Rumay"
-              >
+              <ExternalLink href={profile.linkedin} className="icon-button" aria-label="LinkedIn de Benjamin Rumay">
                 <Linkedin size={18} aria-hidden="true" />
               </ExternalLink>
-              <ExternalLink
-                href={profile.github}
-                className="icon-button"
-                aria-label="GitHub de Benjamin Rumay"
-              >
+              <ExternalLink href={profile.github} className="icon-button" aria-label="GitHub de Benjamin Rumay">
                 <Github size={19} aria-hidden="true" />
               </ExternalLink>
-              <ExternalLink
-                href={profile.instagram}
-                className="icon-button"
-                aria-label="Instagram de Benjamin Rumay"
-              >
+              <ExternalLink href={profile.instagram} className="icon-button" aria-label="Instagram de Benjamin Rumay">
                 <Instagram size={19} aria-hidden="true" />
               </ExternalLink>
             </div>

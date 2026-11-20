@@ -1,4 +1,6 @@
 export const technologyIcons: Record<string, { file: string; monochrome?: boolean }> = {
+  HTML: { file: 'html5.svg' },     
+  CSS: { file: 'css3.svg' },      
   'Next.js': { file: 'nextjs.svg', monochrome: true },
   React: { file: 'react.svg' },
   TypeScript: { file: 'typescript.svg' },

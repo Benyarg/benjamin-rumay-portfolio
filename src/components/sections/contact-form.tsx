@@ -19,31 +19,24 @@ export function ContactForm() {
 
     if (name.length > 80) {
       setError('El nombre puede tener como máximo 80 caracteres.');
-
       form.querySelector<HTMLInputElement>('#contact-name')?.focus();
-
       return;
     }
 
     if (message.length < 10 || message.length > 2000) {
       setError('Escribe un mensaje de entre 10 y 2000 caracteres.');
-
       form.querySelector<HTMLTextAreaElement>('#contact-message')?.focus();
-
       return;
     }
 
     setError('');
-
     window.open(whatsappUrl(name, message), '_blank', 'noopener,noreferrer');
   }
 
   return (
     <form className="contact-form panel reveal-right" onSubmit={submit} noValidate>
       <p className="small-label">Envíame un mensaje</p>
-
       <h3>Cuéntame qué tienes en mente</h3>
-
       <p className="form-intro">
         Completa el formulario y continuarás la conversación directamente por WhatsApp.
       </p>
@@ -52,7 +45,6 @@ export function ContactForm() {
         <label htmlFor="contact-name">
           Nombre <span>(opcional)</span>
         </label>
-
         <input
           id="contact-name"
           name="name"
@@ -65,7 +57,6 @@ export function ContactForm() {
 
       <div className="form-field">
         <label htmlFor="contact-message">Mensaje</label>
-
         <textarea
           id="contact-message"
           name="message"
@@ -77,9 +68,7 @@ export function ContactForm() {
           aria-describedby={`contact-help${error ? ' contact-error' : ''}`}
           aria-invalid={error ? true : undefined}
           onInput={() => {
-            if (error) {
-              setError('');
-            }
+            if (error) setError('');
           }}
         />
       </div>

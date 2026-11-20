@@ -4,7 +4,11 @@ import { profile } from '@/data/profile';
 
 export function Hero() {
   return (
-    <section className="shell hero" id="hero" aria-labelledby="hero-title">
+    <section 
+      id="hero" 
+      aria-labelledby="hero-title" 
+      className="mx-auto grid w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 hero"
+    >
       <div className="hero-copy">
         <p className="availability">
           <span aria-hidden="true" />

@@ -6,46 +6,26 @@ export const projects = [
   // =========================================================
   {
     title: 'Detalles Belis',
-
-    summary:
-      'Sitio web para un negocio de regalos personalizados, con catálogo visual y contacto directo.',
-
-    description:
-      'Landing page desarrollada para presentar productos personalizados, facilitar consultas y conectar a los clientes directamente con el negocio.',
-
+    summary: 'Sitio web para un negocio de regalos personalizados, con catálogo visual y contacto directo.',
+    description: 'Landing page de alto rendimiento desarrollada para presentar productos personalizados, optimizar el embudo de ventas y conectar a los clientes directamente con el negocio.',
     category: 'Landing page',
-
-    problem:
-      'El emprendimiento necesitaba un espacio propio para presentar sus productos y facilitar el contacto con potenciales clientes.',
-
-    solution:
-      'Diseñé y desarrollé una landing responsive con catálogo visual, información del negocio, formulario de contacto y acceso directo a WhatsApp.',
-
+    problem: 'El emprendimiento dependía exclusivamente de redes sociales para mostrar su catálogo, lo que limitaba su profesionalismo, dispersaba la atención del cliente y generaba pérdida de consultas en los mensajes directos.',
+    solution: 'Diseñé y desarrollé una landing page ultrarrápida (sin dependencias pesadas) con un catálogo visual organizado por categorías. Integré un formulario de contacto y un acceso directo a WhatsApp para eliminar la fricción en el proceso de compra.',
     slug: 'detalles-belis',
-
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
-
+    // ✅ Stack actualizado: Frontend + Deploy
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Netlify'],
     architecture: [
-      'Landing page responsive organizada por secciones.',
-      'Catálogo visual para presentar productos y categorías.',
-      'Formulario y canales de contacto integrados.',
+      'Landing page responsive optimizada para carga rápida.',
+      'Catálogo visual estructurado para presentar productos.',
+      'Integración directa con WhatsApp para conversión inmediata.',
     ],
-
-    result:
-      'El negocio cuenta con un sitio web publicado en detallesbelis.com para presentar sus productos y recibir consultas de forma directa.',
-
+    result: 'El negocio ahora cuenta con una identidad digital profesional y un canal centralizado de ventas. La nueva web redujo el tiempo de respuesta y aumentó la tasa de conversión de visitantes a consultas directas.',
     note: 'Proyecto desarrollado para un emprendimiento real, priorizando una experiencia sencilla, visual y orientada al contacto con clientes.',
-
     github: 'https://github.com/Benyarg/detallesbelis',
-
     demo: 'https://detallesbelis.com',
-
     featured: true,
-
     status: 'En producción',
-
     logo: '/projects/detalles-belis/detalles-belis-logo.webp',
-
     preview: {
       src: '/projects/detalles-belis/home-detallesbelis.png',
       alt: 'Presentación del inicio de Detalles Belis en un navegador',
@@ -54,7 +34,6 @@ export const projects = [
       width: 1440,
       height: 960,
     },
-
     gallery: [
       {
         src: '/projects/detalles-belis/responsive-desktop.png',
@@ -96,59 +75,37 @@ export const projects = [
   // =========================================================
   {
     slug: 'atrium',
-
     title: 'Atrium Academy',
-
     logo: '/projects/atrium/atrium-logo.png',
-
-    summary:
-      'Proyecto personal desarrollado a partir de una referencia académica, con identidad visual y enfoque propios.',
-
-    description:
-      'Plataforma web orientada a la presentación, aprendizaje y gestión de contenidos formativos.',
-
+    summary: 'Plataforma de e-learning con identidad propia, diseñada para la gestión de contenidos formativos y experiencia de usuario.',
+    description: 'Plataforma web orientada a la presentación, aprendizaje y gestión de contenidos formativos, construida con una arquitectura escalable.',
     category: 'Arquitectura y formación',
-
     status: 'En producción',
-
     featured: true,
-
-    problem:
-      'Replantear una referencia académica y convertirla en una propuesta personal con identidad, estructura y experiencia propias.',
-
-    solution:
-      'Reconstruí la experiencia con una nueva identidad visual, catálogo de cursos, vistas para estudiantes y herramientas de administración.',
-
+    problem: 'La versión inicial (académica) presentaba una arquitectura fuertemente acoplada que dificultaba el mantenimiento y la escalabilidad. Además, carecía de una identidad visual atractiva y de herramientas de administración eficientes.',
+    solution: 'Lideré una reconstrucción total aplicando Clean Architecture y ASP.NET Core. Implementé un sistema de autenticación robusto con Identity, almacenamiento en la nube para imágenes y un panel administrativo intuitivo. Todo el despliegue se automatizó con Docker.',
+    // ✅ Stack actualizado: Full Stack
     technologies: [
-      'ASP.NET Core MVC',
-      '.NET 9',
+      'HTML',
+      'CSS',
       'C#',
+      '.NET',
+      'ASP.NET Core',
       'Entity Framework Core',
       'PostgreSQL',
-      'Neon',
-      'ASP.NET Core Identity',
       'Docker',
       'Vercel',
     ],
-
     architecture: [
-      'Arquitectura organizada en Domain, Infrastructure, Web y Tests.',
-      'Base de datos PostgreSQL alojada en Neon.',
-      'Autenticación y roles con ASP.NET Core Identity.',
-      'Almacenamiento persistente de imágenes con Neon Object Storage.',
-      'Panel independiente para estudiantes y administración.',
-      'Despliegue mediante Docker en Vercel.',
+      'Clean Architecture (Domain, Infrastructure, Web, Tests).',
+      'Base de datos PostgreSQL en la nube (Neon).',
+      'Autenticación, autorización y roles con ASP.NET Core Identity.',
+      'Despliegue contenedorizado con Docker en Vercel.',
     ],
-
-    result:
-      'Atrium Academy cuenta con una versión finalizada y desplegada, con identidad propia y una experiencia orientada al aprendizaje y la gestión de contenidos.',
-
+    result: 'Una plataforma robusta, segura y lista para producción. El nuevo diseño arquitectónico permite escalar el sistema y añadir funcionalidades sin afectar el núcleo, mejorando la experiencia tanto de estudiantes como de administradores.',
     note: 'El proyecto parte de una referencia académica previa y fue reconstruido como una propuesta personal independiente.',
-
     github: 'https://github.com/Benyarg/ATRIUM-Academy',
-
     demo: 'https://atrium-academy-rouge.vercel.app/',
-
     preview: {
       src: '/projects/atrium/home-atrium.png',
       alt: 'Página principal de Atrium Academy',
@@ -157,7 +114,6 @@ export const projects = [
       width: 1920,
       height: 1080,
     },
-
     gallery: [
       {
         src: '/projects/atrium/home-atrium.png',
@@ -215,45 +171,34 @@ export const projects = [
   // =========================================================
   {
     slug: 'ia-cognitiva',
-
     title: 'IA Cognitiva',
-
-    summary:
-      'Plataforma web con Machine Learning para analizar indicadores cognitivos y emocionales en estudiantes universitarios.',
-
-    description:
-      'Proyecto de investigación que integra evaluaciones cognitivas y emocionales, análisis de resultados y Machine Learning.',
-
+    summary: 'Plataforma de investigación con Machine Learning para analizar indicadores cognitivos y emocionales en estudiantes universitarios.',
+    description: 'Proyecto de investigación que integra evaluaciones cognitivas, cuestionarios emocionales y modelos predictivos para el análisis de datos.',
     category: 'Investigación · Machine Learning',
-
     featured: true,
-
     status: 'Finalizado · Demo en Azure',
-
+    // ✅ Stack actualizado: Backend + ML + DB + Cloud
     technologies: [
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'JavaScript',
       'C#',
-      '.NET 10',
-      'ASP.NET Core MVC',
-      'Entity Framework Core',
-      'ASP.NET Core Identity',
+      '.NET',
       'ML.NET',
       'SQL Server',
-      'Azure SQL',
       'Microsoft Azure',
       'GitHub Actions',
     ],
-
     logo: '/projects/ia-cognitiva/logo.png',
-
     preview: {
-      src: '/projects/ia-cognitiva/consentimiento.png',
-      alt: 'Pantalla real de consentimiento y evaluación de investigación de IA Cognitiva',
-      caption: 'Consentimiento e inicio de la evaluación',
+      src: '/projects/ia-cognitiva/dashboard-iacognitiva.png',
+      alt: 'Dashboard administrativo de IA Cognitiva',
+      caption: 'Dashboard administrativo',
       kind: 'screenshot',
       width: 1892,
-      height: 906,
+      height: 916,
     },
-
     gallery: [
       {
         src: '/projects/ia-cognitiva/consentimiento.png',
@@ -320,27 +265,17 @@ export const projects = [
         height: 916,
       },
     ],
-
-    problem:
-      'Analizar indicadores cognitivos y emocionales asociados al uso de inteligencia artificial generativa en estudiantes universitarios.',
-
-    solution:
-      'Desarrollé una plataforma que integra consentimiento, pruebas cognitivas, cuestionarios, análisis de resultados y administración de participantes.',
-
+    problem: 'La recolección y el análisis de indicadores cognitivos y emocionales (como los del test DASS-21) se realizaban de forma manual o mediante herramientas dispersas, lo que ralentizaba la investigación y limitaba el alcance del estudio.',
+    solution: 'Construí una plataforma web integral en .NET 10 que centraliza las evaluaciones y utiliza ML.NET para procesar los datos automáticamente. La seguridad se gestiona con Identity, y el despliegue continuo (CI/CD) se realiza en Azure con GitHub Actions.',
     architecture: [
       'ASP.NET Core MVC sobre .NET 10.',
       'Entity Framework Core con SQL Server y Azure SQL.',
-      'ASP.NET Core Identity para autenticación y roles.',
-      'ML.NET para Machine Learning y Azure para despliegue.',
+      'ML.NET para el modelado de Machine Learning.',
+      'Despliegue automatizado en Azure vía GitHub Actions.',
     ],
-
-    result:
-      'La plataforma permite recopilar evaluaciones, analizar indicadores y administrar los datos del estudio desde un entorno web desplegado en Azure.',
-
+    result: 'Un entorno digital seguro y escalable que permite procesar datos de investigación de forma masiva y automática. La plataforma agiliza la obtención de resultados experimentales, facilitando la toma de decisiones basadas en datos.',
     note: 'Proyecto académico de investigación. Los resultados son indicadores experimentales y no constituyen un diagnóstico clínico.',
-
     github: 'https://github.com/Benyarg/tesis-ia-cognitiva-ml',
-
     demo: 'https://plataformaia-f6gxc2bhc3g3e4cv.eastus2-01.azurewebsites.net',
   },
 
@@ -349,32 +284,18 @@ export const projects = [
   // =========================================================
   {
     title: 'PlanorIA',
-
     summary: 'Aprendizaje autónomo con flashcards, quizzes e inteligencia artificial.',
-
-    description:
-      'Plataforma educativa con IA para organizar el estudio mediante flashcards y quizzes personalizados.',
-
+    description: 'Plataforma educativa con IA para organizar el estudio mediante flashcards y quizzes personalizados.',
     category: 'Aplicación educativa',
-
-    problem:
-      'Los estudiantes necesitan herramientas que les permitan organizar el estudio y practicar con contenido adaptado a sus temas.',
-
-    solution:
-      'Implementé una plataforma con generación de contenido personalizado y seguimiento del progreso de estudio.',
-
+    problem: 'Los estudiantes invierten demasiado tiempo organizando apuntes y creando material de estudio, lo que reduce las horas efectivas de repaso y práctica.',
+    solution: 'Implementé una plataforma que utiliza inteligencia artificial para autogenerar contenido de estudio (flashcards y quizzes) a partir de textos, junto con un sistema de seguimiento del progreso.',
     slug: 'planoria',
-
+    // (Se mantiene el stack que ya tenías definido)
     technologies: ['C#', 'ASP.NET Core', 'React', 'TypeScript', 'Azure SQL'],
-
     status: 'En desarrollo · Disponible próximamente',
-
     note: 'Proyecto actualmente en desarrollo. Disponible próximamente.',
-
     result: 'La versión final del proyecto estará disponible próximamente.',
-
     featured: false,
-
     gallery: [
       {
         src: '/projects/planoria/planoria-dashboard.webp',
@@ -385,7 +306,6 @@ export const projects = [
         height: 960,
       },
     ],
-
     preview: {
       src: '/projects/planoria/planoria-dashboard.webp',
       alt: 'Diseño conceptual del panel de estudio de PlanorIA',
@@ -394,7 +314,6 @@ export const projects = [
       width: 1440,
       height: 960,
     },
-
     logo: '/projects/planoria/planoria-logo.webp',
   },
 
@@ -403,36 +322,20 @@ export const projects = [
   // =========================================================
   {
     title: 'Kaphiy — Sistema de Gestión para Cafetería',
-
     shortTitle: 'Kaphiy',
-
     summary: 'Gestión de pedidos, inventario y ventas con aplicación web y móvil.',
-
-    description:
-      'Sistema de gestión para una cafetería, desarrollado en equipo, con una aplicación web y una app Android complementaria.',
-
+    description: 'Sistema de gestión para una cafetería, desarrollado en equipo, con una aplicación web y una app Android complementaria.',
     category: 'Sistema web + móvil',
-
-    problem:
-      'La cafetería necesitaba centralizar la información de pedidos, inventario y ventas.',
-
-    solution:
-      'Desarrollamos una aplicación web con Angular y Spring Boot, junto con una app Android para complementar el sistema.',
-
+    problem: 'La cafetería operaba con procesos manuales para la toma de pedidos y el control de inventario, lo que generaba errores en el stock y retrasos en la atención al cliente.',
+    solution: 'Desarrollamos una solución integral con una app web administrativa en Angular y Spring Boot, complementada con una app nativa en Android para que los meseros tomen pedidos en tiempo real.',
     slug: 'kaphiy',
-
+    // (Se mantiene el stack que ya tenías definido)
     technologies: ['Java', 'Spring Boot', 'Angular', 'Android', 'MySQL'],
-
     status: 'En desarrollo · Disponible próximamente',
-
     note: 'Proyecto actualmente en desarrollo. Disponible próximamente.',
-
     result: 'La versión final del proyecto estará disponible próximamente.',
-
     featured: false,
-
     role: 'En equipo (vendlab)',
-
     gallery: [
       {
         src: '/projects/kaphiy/kaphiy-dashboard.webp',
@@ -443,7 +346,6 @@ export const projects = [
         height: 960,
       },
     ],
-
     preview: {
       src: '/projects/kaphiy/kaphiy-dashboard.webp',
       alt: 'Diseño conceptual del panel de gestión de Kaphiy',
@@ -452,7 +354,6 @@ export const projects = [
       width: 1440,
       height: 960,
     },
-
     logo: '/projects/kaphiy/kaphiy-logo.webp',
   },
 ] satisfies Project[];

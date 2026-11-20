@@ -42,12 +42,12 @@ export function ProjectGallery({
     <>
       <div className="gallery-grid">
         {images.map((image, index) => (
-          <figure className="gallery-item panel" key={image.src}>
+          <figure className="gallery-item panel group" key={image.src}>
             <a
               href={image.src}
               target="_blank"
               rel="noopener noreferrer"
-              className="gallery-trigger"
+              className="gallery-trigger overflow-hidden block"
               aria-label={`Ampliar: ${image.caption}`}
               aria-haspopup="dialog"
               onClick={(event) => {
@@ -65,6 +65,7 @@ export function ProjectGallery({
                 width={image.width}
                 height={image.height}
                 sizes="(max-width: 767px) 92vw, 580px"
+                className="transition-transform duration-700 ease-out group-hover:scale-105"
               />
 
               <span className="expand-icon" aria-hidden="true">

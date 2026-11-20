@@ -27,8 +27,8 @@ export function Technologies() {
   return (
     <section
       id="technologies"
-      className="shell section-space"
       aria-labelledby="technologies-title"
+      className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 section-space"
     >
       <SectionHeading
         id="technologies-title"
@@ -55,7 +55,6 @@ export function Technologies() {
               return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
             })
             .map(({ title, description, icon, items }) => {
-              // ✅ Fallback: si el icono no existe, usa Boxes
               const Icon = icons[icon as IconKey] ?? Boxes;
 
               return (

@@ -15,8 +15,8 @@ export function Services() {
   return (
     <section
       id="services"
-      className="shell section-space"
       aria-labelledby="services-title"
+      className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 section-space"
     >
       <SectionHeading
         id="services-title"
@@ -27,7 +27,6 @@ export function Services() {
 
       <div className="services-grid">
         {services.map(({ title, description, icon, tags }, index) => {
-          // ✅ Fallback: si el icono no existe, usa AppWindow
           const Icon = icons[icon as IconKey] ?? AppWindow;
 
           return (

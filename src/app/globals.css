@@ -137,13 +137,6 @@ main:focus {
 /* ============================================================
    UTILIDADES
    ============================================================ */
-.shell {
-  width: 100%;
-  max-width: 1200px;
-  padding-inline: 24px;
-  margin-inline: auto;
-}
-
 .section-space {
   padding-block: 48px;
 }
@@ -177,9 +170,8 @@ main:focus {
   color: #aec6ff;
 }
 
-/* 🔥 FIX: Más espacio debajo del título de la sección */
 .section-heading {
-  margin-bottom: 48px; 
+  margin-bottom: 48px;
 }
 
 .section-description {
@@ -319,11 +311,7 @@ main:focus {
 
 .header-inner {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 72px;
+  padding-block: 16px;
 }
 
 .brand {
@@ -504,7 +492,7 @@ dialog::backdrop {
   align-items: center;
   gap: 32px;
   min-height: auto;
-  padding-top: 34px;
+  padding-top: 20px;
   padding-bottom: 56px;
 }
 
@@ -626,7 +614,7 @@ dialog::backdrop {
 .photo-image {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4 / 4.8; 
   border: 1px solid #ffffff1a;
   border-radius: 24px;
   background: #1b1c1c;
@@ -645,7 +633,7 @@ dialog::backdrop {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 20%; 
   transition: transform 0.5s ease-out;
 }
 
@@ -995,7 +983,6 @@ dialog::backdrop {
   gap: 14px;
 }
 
-/* 🔥 FIX: Corregir la indentación de la etiqueta "Desarrollo de Software" */
 .experience-heading .small-label,
 .experience-heading .eyebrow {
   padding-left: 0 !important;
@@ -1246,7 +1233,6 @@ dialog::backdrop {
   margin-top: 4px;
 }
 
-/* Grid base para íconos (Backend y Database) */
 .technology-items {
   list-style: none;
   display: grid;
@@ -1289,7 +1275,6 @@ dialog::backdrop {
   color: #aec6ff;
 }
 
-/* 🔥 ALINEACIÓN MATEMÁTICA PERFECTA: 3 columnas alineadas con los bordes de las 4 columnas */
 .technology-frontend .technology-items,
 .technology-cloud .technology-items {
   display: grid;
@@ -1307,7 +1292,6 @@ dialog::backdrop {
   width: 100%;
 }
 
-/* Cuadrícula estricta para Herramientas */
 .technology-tools .technology-items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1342,7 +1326,6 @@ dialog::backdrop {
   height: 22px;
 }
 
-/* ARQUITECTURA: Alineado a la izquierda */
 .technology-architecture .technology-items {
   display: flex;
   flex-wrap: wrap;
@@ -1525,10 +1508,10 @@ dialog::backdrop {
 
 .contact-email > svg:first-child,
 .contact-detail > svg {
-  width: 22px;       
-  height: 22px;      
-  flex-shrink: 0;    
-  color: #aec6ff;    
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #aec6ff;
 }
 
 .contact-email {
@@ -1563,7 +1546,7 @@ dialog::backdrop {
 .contact-detail p {
   font-size: 14px;
   margin-top: 4px;
-  margin-bottom: 0; /* Evita espacios extra */
+  margin-bottom: 0;
 }
 
 .contact-socials {
@@ -1682,7 +1665,7 @@ textarea[aria-invalid] {
 }
 
 /* ============================================================
-   FOOTER (ALINEADO CON EL HEADER)
+   FOOTER
    ============================================================ */
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -2449,14 +2432,6 @@ textarea[aria-invalid] {
     scroll-margin-top: 84px;
   }
 
-  .shell {
-    padding-inline: 24px;
-  }
-
-  .header-inner {
-    min-height: 72px;
-  }
-
   .site-header .header-brand img,
   .site-header .brand img {
     width: auto;
@@ -2573,7 +2548,6 @@ textarea[aria-invalid] {
     display: none;
   }
 
-  /* 🔥 FIX: Forzar 4 columnas en Backend y DB para pantallas pequeñas */
   .technology-backend .technology-items,
   .technology-database .technology-items {
     grid-template-columns: repeat(4, 1fr);
@@ -2680,7 +2654,6 @@ textarea[aria-invalid] {
     border-radius: 18px;
   }
 
-  /* Footer móvil: centrado */
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -2709,10 +2682,6 @@ textarea[aria-invalid] {
 
 /* === iPhone grande: 480px - 639px === */
 @media (min-width: 480px) and (max-width: 639px) {
-  .shell {
-    padding-inline: 32px;
-  }
-
   .hero {
     padding-top: 36px;
     padding-bottom: 56px;
@@ -2732,10 +2701,6 @@ textarea[aria-invalid] {
 @media (min-width: 640px) {
   section[id] {
     scroll-margin-top: 92px;
-  }
-
-  .shell {
-    padding-inline: 40px;
   }
 
   .hero h1 {
@@ -2855,14 +2820,6 @@ textarea[aria-invalid] {
     scroll-margin-top: 100px;
   }
 
-  .shell {
-    padding-inline: 48px;
-  }
-
-  .header-inner {
-    min-height: 82px;
-  }
-
   .site-header .header-brand img,
   .site-header .brand img {
     height: 52px;
@@ -2872,27 +2829,35 @@ textarea[aria-invalid] {
     padding-block: 64px;
   }
 
-  /* 🔥 HERO EN 2 COLUMNAS PARA IPAD MINI */
+  /* ✅ HERO CORREGIDO PARA IPAD MINI (MENOS APLASTADO) */
   .hero {
-    grid-template-columns: 1.15fr 0.85fr;
+    /* 1.15fr le da más espacio al texto, 0.85fr se lo quita a la imagen */
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     align-items: center;
-    gap: 40px;
-    min-height: calc(100svh - 120px);
-    padding-block: 48px 72px;
+    gap: 32px; /* Gap más apretado para ganar espacio horizontal */
+    min-height: auto;
+    padding-block: 48px 64px;
   }
 
   .hero h1 {
-    font-size: 52px;
+    font-size: clamp(40px, 4.5vw, 46px); /* Escala mejor para que no se rompa feo */
     white-space: normal;
+    line-height: 1.1;
   }
 
   .hero-role {
-    font-size: 28px;
+    font-size: clamp(22px, 2.5vw, 26px); /* Texto animado más controlado */
+    min-height: 1.5em;
+  }
+
+  .hero-description {
+    font-size: 15px; /* Un punto más pequeño para que respire mejor */
+    line-height: 1.6;
   }
 
   .hero-visual {
     width: 100%;
-    max-width: 100%;
+    max-width: 320px; /* Imagen más compacta para no asfixiar el texto */
     margin-inline: 0;
     justify-self: end;
   }
@@ -2953,10 +2918,6 @@ textarea[aria-invalid] {
 
 /* === Tablet grande: 900px - 1099px === */
 @media (min-width: 900px) and (max-width: 1099px) {
-  .shell {
-    padding-inline: 56px;
-  }
-
   .section-space {
     padding-block: 72px;
   }
@@ -3067,7 +3028,6 @@ textarea[aria-invalid] {
     justify-content: flex-end;
   }
 
-  /* Footer tablet grande: 2 columnas */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -3100,25 +3060,6 @@ textarea[aria-invalid] {
     scroll-margin-top: 116px;
   }
 
-  .shell {
-    padding-inline: 56px;
-  }
-
-  /* ✅ FIX: Footer shell alineado con el header */
-  .site-footer .shell {
-    padding-inline: 56px;
-  }
-
-  /* HEADER */
-  .header-inner {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    width: 100%;
-    min-height: 100px;
-    gap: 32px;
-  }
-
   .site-header .header-brand {
     position: static;
     display: flex;
@@ -3135,8 +3076,7 @@ textarea[aria-invalid] {
   }
 
   .desktop-navigation {
-    position: relative !important;
-    left: 47px;
+    position: static !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -3206,12 +3146,11 @@ textarea[aria-invalid] {
     display: none;
   }
 
-  /* HERO desktop */
   .hero {
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
     gap: 56px;
-    min-height: calc(100svh - 100px);
-    padding-block: 64px 80px;
+    min-height: calc(100svh - 120px);
+    padding-block: 40px 64px; 
   }
 
   .hero-copy {
@@ -3260,7 +3199,7 @@ textarea[aria-invalid] {
 
   .hero-visual {
     width: 100%;
-    max-width: 430px;
+    max-width: 420px;
     margin-inline: 0;
     justify-self: end;
   }
@@ -3274,7 +3213,6 @@ textarea[aria-invalid] {
     padding-block: 80px;
   }
 
-  /* Footer desktop: 4 columnas alineadas */
   .footer-grid {
     grid-template-columns: 1.4fr 1fr 1.2fr 0.8fr;
     gap: 2.5rem;
@@ -3284,10 +3222,6 @@ textarea[aria-invalid] {
 
 /* === Desktop amplio: 1280px+ === */
 @media (min-width: 1280px) {
-  .desktop-navigation {
-    left: 47px;
-  }
-
   .desktop-navigation ul {
     gap: 32px;
   }
@@ -3310,47 +3244,29 @@ textarea[aria-invalid] {
   }
 
   .hero-visual {
-    max-width: 470px;
+    max-width: 440px;
   }
 }
 
 /* === Desktop grande: 1440px+ === */
 @media (min-width: 1440px) {
-  main .shell,
-  main.shell,
-  .site-header .header-inner,
-  .site-footer .shell {
-    max-width: 1320px;
-    padding-inline: 64px;
-    margin-inline: auto;
-  }
-
   .section-space {
     padding-block: 96px;
   }
 
   .hero-visual {
-    max-width: 485px;
+    max-width: 450px;
   }
 }
 
 /* === Desktop XL: 1600px+ === */
 @media (min-width: 1600px) {
-  main .shell,
-  main.shell,
-  .site-header .header-inner,
-  .site-footer .shell {
-    max-width: 1400px;
-    padding-inline: 72px;
-    margin-inline: auto;
-  }
-
   .hero {
     min-height: calc(86svh - 100px);
   }
 
   .hero-visual {
-    max-width: 500px;
+    max-width: 460px;
   }
 
   .section-space {
@@ -3360,21 +3276,12 @@ textarea[aria-invalid] {
 
 /* === Desktop XXL: 1800px+ === */
 @media (min-width: 1800px) {
-  main .shell,
-  main.shell,
-  .site-header .header-inner,
-  .site-footer .shell {
-    max-width: 1520px;
-    padding-inline: 80px;
-    margin-inline: auto;
-  }
-
   .hero {
     gap: 96px;
   }
 
   .hero-visual {
-    max-width: 520px;
+    max-width: 470px;
   }
 }
 
@@ -3454,3 +3361,5 @@ textarea[aria-invalid] {
     translate: none !important;
   }
 }
+
+

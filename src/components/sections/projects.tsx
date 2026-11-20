@@ -3,14 +3,13 @@ import { ProjectCard } from '@/components/projects/project-card';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 export function Projects() {
-  // ✅ Acceso seguro: usa optional chaining
   const prominentSlug = projects.find((p) => p.featured === true)?.slug;
 
   return (
     <section
       id="projects"
-      className="shell section-space"
       aria-labelledby="projects-title"
+      className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 section-space"
     >
       <SectionHeading
         id="projects-title"

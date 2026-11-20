@@ -12,7 +12,7 @@ export function Header() {
       </a>
 
       <header className="site-header" id="mainNav">
-        <div className="shell header-inner">
+        <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-3 px-5 py-4 sm:px-8 lg:px-12 min-h-[72px]">
           <Link
             href="/"
             className="brand header-brand"
@@ -34,7 +34,7 @@ export function Header() {
 
       <noscript>
         <nav
-          className="shell no-script-navigation"
+          className="mx-auto flex w-full max-w-[1440px] flex-wrap gap-3 px-5 py-3 sm:px-8 lg:px-12"
           aria-label="Navegación sin JavaScript"
         >
           {navigation.map(({ id, label }) => (
